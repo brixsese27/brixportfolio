@@ -3,7 +3,7 @@
 import * as React from "react";
 import { profileData } from "@/data/profile";
 import { navItems } from "@/data/navigation";
-import { Terminal, Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Terminal, Github, Linkedin, Facebook, Mail, ArrowUp } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -80,6 +80,15 @@ export function Footer() {
               aria-label="LinkedIn Profile"
             >
               <Linkedin className="w-4 h-4" />
+            </a>
+            <a
+              href={profileData.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-1 text-muted-foreground hover:text-blue-500 transition-colors"
+              aria-label="Facebook Profile"
+            >
+              <Facebook className="w-4 h-4" />
             </a>
             <a
               href={`mailto:${profileData.email}`}

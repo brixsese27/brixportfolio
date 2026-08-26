@@ -10,6 +10,7 @@ export interface Profile {
   phone: string;
   github: string;
   linkedin: string;
+  facebook: string;
   resumeUrl: string;
   bioParagraphs: string[];
   focusAreas: string[];

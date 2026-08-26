@@ -10,6 +10,7 @@ import {
   Check,
   Github,
   Linkedin,
+  Facebook,
   FileDown,
   Terminal,
   Send,
@@ -213,17 +214,17 @@ export function Contact() {
             </div>
 
             {/* Social & Resume Cards */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-2.5">
               <a
                 href={profileData.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-xl bg-card hover:bg-accent border border-border transition-all flex flex-col justify-between space-y-3 group shadow-sm"
+                className="p-3.5 rounded-xl bg-card hover:bg-accent border border-border transition-all flex flex-col justify-between space-y-2 group shadow-sm"
               >
-                <Github className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+                <Github className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
                 <div>
                   <div className="text-xs font-mono font-bold text-foreground">GitHub</div>
-                  <div className="text-[11px] text-muted-foreground font-mono">Repositories</div>
+                  <div className="text-[10px] text-muted-foreground font-mono">Code Repos</div>
                 </div>
               </a>
 
@@ -231,12 +232,25 @@ export function Contact() {
                 href={profileData.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-xl bg-card hover:bg-accent border border-border transition-all flex flex-col justify-between space-y-3 group shadow-sm"
+                className="p-3.5 rounded-xl bg-card hover:bg-accent border border-border transition-all flex flex-col justify-between space-y-2 group shadow-sm"
               >
-                <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-blue-500 transition-colors" />
+                <Linkedin className="w-4 h-4 text-muted-foreground group-hover:text-blue-500 transition-colors" />
                 <div>
                   <div className="text-xs font-mono font-bold text-foreground">LinkedIn</div>
-                  <div className="text-[11px] text-muted-foreground font-mono">Professional Profile</div>
+                  <div className="text-[10px] text-muted-foreground font-mono">Profile</div>
+                </div>
+              </a>
+
+              <a
+                href={profileData.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-card hover:bg-accent border border-border transition-all flex flex-col justify-between space-y-2 group shadow-sm"
+              >
+                <Facebook className="w-4 h-4 text-muted-foreground group-hover:text-blue-600 transition-colors" />
+                <div>
+                  <div className="text-xs font-mono font-bold text-foreground">Facebook</div>
+                  <div className="text-[10px] text-muted-foreground font-mono">Connect</div>
                 </div>
               </a>
 
@@ -244,7 +258,7 @@ export function Contact() {
                 href={profileData.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="col-span-2 p-4 rounded-xl bg-card hover:bg-accent border border-border transition-all flex items-center justify-between group shadow-sm"
+                className="col-span-3 p-3.5 rounded-xl bg-card hover:bg-accent border border-border transition-all flex items-center justify-between group shadow-sm"
               >
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-lg bg-muted text-brand-500">

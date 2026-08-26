@@ -13,6 +13,7 @@ export const profileData: Profile = {
   phone: "+639854026038",
   github: "https://github.com/brixsese27",
   linkedin: "https://www.linkedin.com/in/brix-sese-196607406/",
+  facebook: "https://www.facebook.com/yasuuuu27",
   resumeUrl: "/resume",
   bioParagraphs: [
     "A reliable and hardworking Bachelor of Science in Information Technology graduate with proven experience in office IT support, computer troubleshooting, and hardware/software maintenance. I am a fast learner, well-mannered, and dedicated to supporting organizational teams and end-users with high-quality technical service.",

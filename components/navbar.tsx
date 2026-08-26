@@ -12,11 +12,19 @@ export function Navbar() {
   const [activeSection, setActiveSection] = React.useState<string>("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState<boolean>(false);
   const [scrolled, setScrolled] = React.useState<boolean>(false);
+  const [scrollProgress, setScrollProgress] = React.useState<number>(0);
 
-  // Track scroll position for glass navbar border & styling
+  // Track scroll position for progress bar & glass navbar border
   React.useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+
+      // Calculate scroll progress percentage
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const progress = (window.scrollY / totalHeight) * 100;
+        setScrollProgress(Math.min(100, Math.max(0, progress)));
+      }
 
       // Determine active section using scroll calculation
       const sections = navItems.map((item) => item.href.replace("#", ""));
@@ -75,6 +83,16 @@ export function Navbar() {
 
   return (
     <>
+      {/* Topmost Reading / Scroll Progress Bar */}
+      <div
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-brand-500 via-emerald-400 to-teal-400 z-50 origin-left transition-all duration-75 shadow-sm"
+        style={{ width: `${scrollProgress}%` }}
+        role="progressbar"
+        aria-valuenow={Math.round(scrollProgress)}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      />
+
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-40 transition-all duration-300",

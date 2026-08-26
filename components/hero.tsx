@@ -7,6 +7,7 @@ import {
   FileDown,
   Github,
   Linkedin,
+  Facebook,
   Mail,
   Phone,
   Terminal,
@@ -140,6 +141,16 @@ export function Hero() {
                 aria-label="Brix Sese LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
+              </a>
+
+              <a
+                href={profileData.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-blue-500 transition-colors p-1 rounded hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label="Brix Sese Facebook"
+              >
+                <Facebook className="w-4 h-4" />
               </a>
             </div>
           </div>
