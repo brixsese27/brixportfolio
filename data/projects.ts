@@ -52,7 +52,7 @@ export const staticCultureProject: Project = {
   ],
   challenges: [],
   githubUrl: "https://github.com/brixsese27/brixportfolio",
-  liveUrl: "https://brixportfolio.vercel.app",
+  liveUrl: "https://staticculture.vercel.app/",
   image: "/staticculturehomepage.png"
 };
 

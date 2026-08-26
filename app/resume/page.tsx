@@ -138,7 +138,15 @@ export default function ResumePage() {
           <div className="space-y-3 text-xs sm:text-[13px] text-zinc-800">
             <div>
               <div className="font-bold text-zinc-950 italic">
-                Static Culture (e-Commerce) | 2026
+                Static Culture (e-Commerce) | 2026 -{" "}
+                <a
+                  href="https://staticculture.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-700 underline font-normal"
+                >
+                  https://staticculture.vercel.app
+                </a>
               </div>
               <ul className="list-disc list-outside pl-4 mt-0.5">
                 <li>
