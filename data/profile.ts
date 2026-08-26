@@ -13,7 +13,7 @@ export const profileData: Profile = {
   phone: "+639854026038",
   github: "https://github.com/brixsese27",
   linkedin: "https://www.linkedin.com/in/brix-sese-196607406/",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume",
   bioParagraphs: [
     "A reliable and hardworking Bachelor of Science in Information Technology graduate with proven experience in office IT support, computer troubleshooting, and hardware/software maintenance. I am a fast learner, well-mannered, and dedicated to supporting organizational teams and end-users with high-quality technical service.",
     "During my 486-hour internship at Gentri Doctors (General Trias Medical Center and Hospital), I provided day-to-day IT support across hospital departments—troubleshooting hardware, deploying Windows OS and Microsoft Office, supporting the BizBox Hospital Information System (HIS), handling LAN/network migration, configuring printers, and executing routine system backups.",
