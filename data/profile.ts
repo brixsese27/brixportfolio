@@ -3,56 +3,58 @@ import { Profile } from "@/types";
 export const profileData: Profile = {
   name: "Brix Sese",
   degree: "Bachelor of Science in Information Technology",
-  field: "Software & Web Development",
-  headline: "Building practical digital experiences through clean code.",
+  field: "IT Support & Technical Systems Maintenance",
+  headline: "Providing reliable IT support, hardware maintenance, and practical digital solutions.",
   subheadline:
-    "BSIT graduate focused on building modern web applications, scalable digital solutions, and intuitive, user-centered interfaces.",
-  status: "Fresh Graduate / Open to Opportunities",
-  location: "[Metro Manila, Philippines / Your Location]",
-  email: "brixsese.dev@gmail.com", // [INSERT EMAIL]
-  github: "https://github.com/brixsese", // [INSERT GITHUB URL]
-  linkedin: "https://linkedin.com/in/brixsese", // [INSERT LINKEDIN URL]
-  resumeUrl: "/resume.pdf", // [INSERT RESUME FILE/LINK]
+    "BSIT graduate from Cavite State University with 486+ hours of hospital IT department internship experience in hardware troubleshooting, OS deployment, BizBox HIS, and network maintenance.",
+  status: "BSIT Graduate / Open to IT Support Roles",
+  location: "Trece Martires City, Cavite, Philippines",
+  email: "sesebrixligon@gmail.com",
+  phone: "+639854026038",
+  github: "https://github.com/brixsese27",
+  linkedin: "https://linkedin.com/in/brixsese",
+  resumeUrl: "/resume.pdf",
   bioParagraphs: [
-    "I am a Bachelor of Science in Information Technology graduate with a deep passion for modern web technologies and software engineering. Throughout my academic training, I focused on turning complex business requirements into clean, maintainable, and high-performance digital applications.",
-    "My development philosophy centers on engineering simplicity, responsive design, and practical system architecture. Rather than relying on superficial trends, I strive to write readable TypeScript, build accessible interfaces, and design robust database structures that solve genuine operational problems.",
-    "As an early-career developer, I bring strong problem-solving fundamentals, high adaptability, and eagerness to contribute to a collaborative engineering team while continuously refining my technical craft."
+    "A reliable and hardworking Bachelor of Science in Information Technology graduate with proven experience in office IT support, computer troubleshooting, and hardware/software maintenance. I am a fast learner, well-mannered, and dedicated to supporting organizational teams and end-users with high-quality technical service.",
+    "During my 486-hour internship at Gentri Doctors (General Trias Medical Center and Hospital), I provided day-to-day IT support across hospital departments—troubleshooting hardware, deploying Windows OS and Microsoft Office, supporting the BizBox Hospital Information System (HIS), handling LAN/network migration, configuring printers, and executing routine system backups.",
+    "Complementing my IT support foundation, I utilize modern AI-assisted tooling (Vibe Coding with Gemini, ChatGPT, and Claude Code) to understand, debug, and develop practical web systems, including our flagship Barangay e-Biga Management Information System (MIS) and responsive web applications."
   ],
   focusAreas: [
-    "Frontend Engineering (Next.js, React, TypeScript)",
-    "Full-Stack Web Systems & RESTful APIs",
-    "Responsive, Accessible UI/UX Implementation",
-    "Relational Database Design & Systems Integration"
+    "Hardware Troubleshooting & PC Maintenance",
+    "Windows OS & Software Deployment",
+    "IT Helpdesk & End-User Support (BizBox HIS)",
+    "Basic Network Configuration (LAN/Ethernet/Wi-Fi)",
+    "Vibe Coding / AI-Assisted Digital Solutions"
   ],
   principles: [
     {
-      title: "Clean Architecture",
-      description: "Writing modular, self-documenting code with strict type safety and structured directory patterns."
+      title: "Reliable Technical Support",
+      description: "Fast-response hardware and software troubleshooting to minimize end-user downtime and ensure operational continuity."
     },
     {
-      title: "Performance & Accessibility",
-      description: "Prioritizing fast load times, zero layout shift, semantic HTML, and responsive mobile-first views."
+      title: "Preventive Maintenance",
+      description: "Routine hardware cleaning, systematic system updates, and verified data backup protocols to protect system integrity."
     },
     {
-      title: "Practical Problem Solving",
-      description: "Focusing on delivering functional, reliable software that solves real user and business workflows."
+      title: "Continuous Learning",
+      description: "Eagerly adopting new tools, operating environments, and AI-assisted workflows to solve technical problems efficiently."
     }
   ],
   quickStats: [
     {
       label: "Degree",
       value: "BSIT",
-      context: "Information Technology"
+      context: "Cavite State University"
     },
     {
       label: "Specialization",
-      value: "Full-Stack",
-      context: "Web & Software Dev"
+      value: "IT Support",
+      context: "Hardware & Systems"
     },
     {
-      label: "Status",
-      value: "Available",
-      context: "Junior & Associate Roles"
+      label: "Internship",
+      value: "486 Hours",
+      context: "Gentri Doctors Hospital"
     }
   ]
 };

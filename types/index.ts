@@ -7,6 +7,7 @@ export interface Profile {
   status: string;
   location: string;
   email: string;
+  phone: string;
   github: string;
   linkedin: string;
   resumeUrl: string;

@@ -2,167 +2,140 @@ import { SkillCategory } from "@/types";
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: "frontend",
-    title: "Frontend Engineering",
-    description: "Building responsive, accessible, and performant user interfaces.",
+    id: "hardware",
+    title: "Hardware Maintenance & Troubleshooting",
+    description: "Hands-on computer, laptop, peripheral diagnosis, and physical maintenance.",
     skills: [
       {
-        name: "HTML5 / Semantic HTML",
+        name: "PC & Laptop Hardware",
         level: "Proficient",
-        description: "Accessible markup structure, SEO best practices, and standard semantics.",
-        iconName: "Code2",
-        highlight: true
-      },
-      {
-        name: "CSS3 / Modern Styling",
-        level: "Proficient",
-        description: "Flexbox, CSS Grid, custom properties, responsive breakpoints, animations.",
-        iconName: "Palette",
-        highlight: true
-      },
-      {
-        name: "JavaScript (ES6+)",
-        level: "Proficient",
-        description: "Asynchronous programming, DOM manipulation, modular architecture, fetch API.",
-        iconName: "FileCode",
-        highlight: true
-      },
-      {
-        name: "TypeScript",
-        level: "Proficient",
-        description: "Static typing, generics, interfaces, strict mode type safety.",
-        iconName: "FileCode2",
-        highlight: true
-      },
-      {
-        name: "React",
-        level: "Proficient",
-        description: "Component lifecycle, custom hooks, state management, memoization.",
-        iconName: "Component",
-        highlight: true
-      },
-      {
-        name: "Next.js",
-        level: "Proficient",
-        description: "App Router, Server/Client components, static site generation (SSG), routing.",
-        iconName: "Layers",
-        highlight: true
-      },
-      {
-        name: "Tailwind CSS",
-        level: "Proficient",
-        description: "Utility-first architecture, custom design tokens, responsive layouts.",
-        iconName: "Sparkles",
-        highlight: true
-      }
-    ]
-  },
-  {
-    id: "backend",
-    title: "Backend & API Development",
-    description: "Architecting reliable server endpoints and business logic.",
-    skills: [
-      {
-        name: "Node.js",
-        level: "Proficient",
-        description: "Server-side runtime, npm ecosystem, asynchronous I/O execution.",
-        iconName: "Server",
-        highlight: true
-      },
-      {
-        name: "Express.js",
-        level: "Proficient",
-        description: "REST API route handling, middleware integration, error handling pipelines.",
+        description: "Component diagnosis, disassembly, hardware upgrades (RAM, SSD/HDD, PSU), and parts replacement.",
         iconName: "Cpu",
         highlight: true
       },
       {
-        name: "RESTful API Design",
+        name: "Basic Troubleshooting",
         level: "Proficient",
-        description: "HTTP verbs, status codes, payload serialization, endpoint structuring.",
+        description: "Diagnosing POST errors, boot issues, hardware malfunctions, thermal throttling, and component failure.",
+        iconName: "Terminal",
+        highlight: true
+      },
+      {
+        name: "Preventive Maintenance",
+        level: "Proficient",
+        description: "System cleaning, dust removal, thermal paste application, cable management, and routine checks.",
+        iconName: "Sparkles",
+        highlight: true
+      },
+      {
+        name: "Peripheral & Equipment Setup",
+        level: "Proficient",
+        description: "Installing and calibrating network printers, flatbed scanners, projectors, and multimedia equipment.",
+        iconName: "Laptop",
+        highlight: true
+      }
+    ]
+  },
+  {
+    id: "software",
+    title: "Operating Systems & Office Software",
+    description: "Installing, deploying, and supporting OS and productivity applications.",
+    skills: [
+      {
+        name: "Windows OS Deployment",
+        level: "Proficient",
+        description: "Clean installation, configuration, disk formatting, driver updates, and recovery for Windows 10 & 11.",
+        iconName: "Laptop",
+        highlight: true
+      },
+      {
+        name: "Microsoft Office Suite",
+        level: "Proficient",
+        description: "Word, Excel (spreadsheets/reporting), PowerPoint, and Outlook configuration for daily office tasks.",
+        iconName: "FileCode",
+        highlight: true
+      },
+      {
+        name: "BizBox HIS Support",
+        level: "Proficient",
+        description: "Hospital Information System user support, client module configuration, and workstation troubleshooting.",
+        iconName: "Server",
+        highlight: true
+      },
+      {
+        name: "Software & Driver Maintenance",
+        level: "Proficient",
+        description: "Deploying enterprise software applications, security patches, antivirus setup, and driver updates.",
+        iconName: "Boxes"
+      }
+    ]
+  },
+  {
+    id: "network",
+    title: "Networking & System Administration",
+    description: "Basic network configuration, backup operations, and user assistance.",
+    skills: [
+      {
+        name: "LAN & Ethernet Cabling",
+        level: "Proficient",
+        description: "RJ-45 termination, cable crimping, patch panel patching, and physical network link testing.",
         iconName: "Network",
         highlight: true
       },
       {
-        name: "PHP / Laravel",
-        level: "Familiar",
-        description: "MVC architecture, routing, Blade templating, authentication flows.",
-        iconName: "Terminal"
-      }
-    ]
-  },
-  {
-    id: "database",
-    title: "Database & Data Management",
-    description: "Designing schema structures, relationships, and queries.",
-    skills: [
-      {
-        name: "MySQL / MariaDB",
+        name: "Basic Network Setup",
         level: "Proficient",
-        description: "Relational schema design, normalization, complex JOIN queries, indexing.",
+        description: "Configuring Wi-Fi access points, router setup, IP addressing, DNS settings, and network printer sharing.",
+        iconName: "Cloud",
+        highlight: true
+      },
+      {
+        name: "Data Backup & Recovery",
+        level: "Proficient",
+        description: "Executing routine computer and file backups, external storage archiving, and data migration.",
         iconName: "Database",
         highlight: true
       },
       {
-        name: "PostgreSQL",
+        name: "IT Helpdesk & End-User Support",
         level: "Proficient",
-        description: "ACID transactions, relational constraints, structured querying.",
-        iconName: "Boxes",
+        description: "Providing on-site and remote technical assistance, user training, and issue ticketing across departments.",
+        iconName: "Send",
         highlight: true
-      },
-      {
-        name: "Prisma ORM",
-        level: "Familiar",
-        description: "Type-safe database client, schema migrations, relation modeling.",
-        iconName: "Workflow"
-      },
-      {
-        name: "MongoDB",
-        level: "Familiar",
-        description: "NoSQL document collections, aggregation pipeline, JSON documents.",
-        iconName: "FolderGit2"
       }
     ]
   },
   {
-    id: "tools",
-    title: "Developer Tools & Workflow",
-    description: "Version control, collaboration, and modern productivity tooling.",
+    id: "vibe-coding",
+    title: "Vibe Coding & Digital Solutions",
+    description: "AI-assisted programming and web application development tools.",
     skills: [
+      {
+        name: "Vibe Coding / AI Agents",
+        level: "Proficient",
+        description: "Using Gemini, ChatGPT, and Claude Code to generate, understand, debug, and improve code for digital solutions.",
+        iconName: "Sparkles",
+        highlight: true
+      },
+      {
+        name: "Web Technologies (Next.js/React)",
+        level: "Proficient",
+        description: "Building responsive web pages, form handling, and user interfaces with HTML5, CSS3, TypeScript, and Next.js.",
+        iconName: "Code2",
+        highlight: true
+      },
       {
         name: "Git & GitHub",
         level: "Proficient",
-        description: "Branching strategies, pull requests, merge conflict resolution, versioning.",
+        description: "Version control, repository management, committing code, and collaborating on digital projects.",
         iconName: "GitBranch",
         highlight: true
       },
       {
         name: "VS Code",
         level: "Proficient",
-        description: "Debugging, extensions, workspace configuration, linting integration.",
-        iconName: "Laptop",
-        highlight: true
-      },
-      {
-        name: "Postman",
-        level: "Proficient",
-        description: "API testing, request collection structuring, automated environment variables.",
-        iconName: "Send",
-        highlight: true
-      },
-      {
-        name: "Figma",
-        level: "Proficient",
-        description: "Wireframing, UI prototyping, inspecting design tokens, responsive specs.",
-        iconName: "Figma",
-        highlight: true
-      },
-      {
-        name: "Vercel / Cloud Deployment",
-        level: "Proficient",
-        description: "Continuous deployment pipelines, static hosting, environment setups.",
-        iconName: "Cloud",
-        highlight: true
+        description: "Workspace configuration, extensions management, terminal usage, and code debugging.",
+        iconName: "Terminal"
       }
     ]
   }

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="scBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fafafa" />
+      <stop offset="100%" stop-color="#f4f4f5" />
+    </linearGradient>
+    <linearGradient id="accentSc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect width="800" height="500" rx="16" fill="url(#scBg)" />
+  <rect width="800" height="500" rx="16" fill="none" stroke="#e4e4e7" stroke-width="1.5" />
+
+  <!-- App Window Bar -->
+  <rect width="800" height="42" fill="#ffffff" />
+  <line x1="0" y1="42" x2="800" y2="42" stroke="#e4e4e7" stroke-width="1" />
+  <circle cx="24" cy="21" r="5" fill="#ef4444" />
+  <circle cx="40" cy="21" r="5" fill="#f59e0b" />
+  <circle cx="56" cy="21" r="5" fill="#10b981" />
+  <text x="80" y="25" fill="#71717a" font-family="monospace" font-size="12">static-culture.store / collection-2026</text>
+  <rect x="670" y="10" width="110" height="22" rx="6" fill="#f4f4f5" stroke="#e4e4e7" stroke-width="1" />
+  <text x="725" y="25" fill="#059669" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">Live Storefront</text>
+
+  <!-- Brand Navbar -->
+  <rect x="24" y="60" width="752" height="48" rx="8" fill="#ffffff" stroke="#e4e4e7" stroke-width="1" />
+  <text x="44" y="89" fill="#18181b" font-family="sans-serif" font-size="15" font-weight="900" letter-spacing="1">STATIC CULTURE</text>
+  
+  <text x="240" y="89" fill="#059669" font-family="sans-serif" font-size="12" font-weight="bold">New Arrivals</text>
+  <text x="340" y="89" fill="#71717a" font-family="sans-serif" font-size="12">Apparel &amp; Tees</text>
+  <text x="450" y="89" fill="#71717a" font-family="sans-serif" font-size="12">Hoodies &amp; Outerwear</text>
+  <text x="600" y="89" fill="#71717a" font-family="sans-serif" font-size="12">Accessories</text>
+
+  <!-- Hero Feature Banner in Store -->
+  <rect x="24" y="122" width="752" height="110" rx="10" fill="#18181b" />
+  <text x="48" y="160" fill="#a1a1aa" font-family="monospace" font-size="11" font-weight="bold">SEASON 2026 DROP // LIMITED RELEASE</text>
+  <text x="48" y="194" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="800">Contemporary Urban Lifestyle &amp; Apparel</text>
+  <rect x="620" y="155" width="130" height="40" rx="8" fill="#10b981" />
+  <text x="685" y="180" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Explore Catalog</text>
+
+  <!-- Product Showcase Grid (3 Items) -->
+  <!-- Product 1 -->
+  <rect x="24" y="248" width="236" height="228" rx="10" fill="#ffffff" stroke="#e4e4e7" stroke-width="1" />
+  <rect x="36" y="258" width="212" height="120" rx="8" fill="#f4f4f5" />
+  <circle cx="142" cy="318" r="30" fill="#e4e4e7" />
+  <text x="142" y="324" fill="#18181b" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">SC-01</text>
+  
+  <text x="36" y="398" fill="#71717a" font-family="monospace" font-size="10">HEAVYWEIGHT TEE</text>
+  <text x="36" y="416" fill="#18181b" font-family="sans-serif" font-size="13" font-weight="bold">Minimal Boxy Fit Tee</text>
+  <text x="36" y="445" fill="#059669" font-family="sans-serif" font-size="14" font-weight="bold">₱850.00</text>
+  <rect x="170" y="430" width="78" height="26" rx="6" fill="#18181b" />
+  <text x="209" y="447" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">View Item</text>
+
+  <!-- Product 2 -->
+  <rect x="282" y="248" width="236" height="228" rx="10" fill="#ffffff" stroke="#e4e4e7" stroke-width="1" />
+  <rect x="294" y="258" width="212" height="120" rx="8" fill="#f4f4f5" />
+  <circle cx="400" cy="318" r="30" fill="#e4e4e7" />
+  <text x="400" y="324" fill="#18181b" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">SC-02</text>
+  
+  <text x="294" y="398" fill="#71717a" font-family="monospace" font-size="10">OVERSIZED HOODIE</text>
+  <text x="294" y="416" fill="#18181b" font-family="sans-serif" font-size="13" font-weight="bold">Static Signature Pullover</text>
+  <text x="294" y="445" fill="#059669" font-family="sans-serif" font-size="14" font-weight="bold">₱1,650.00</text>
+  <rect x="428" y="430" width="78" height="26" rx="6" fill="#18181b" />
+  <text x="467" y="447" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">View Item</text>
+
+  <!-- Product 3 -->
+  <rect x="540" y="248" width="236" height="228" rx="10" fill="#ffffff" stroke="#e4e4e7" stroke-width="1" />
+  <rect x="552" y="258" width="212" height="120" rx="8" fill="#f4f4f5" />
+  <circle cx="658" cy="318" r="30" fill="#e4e4e7" />
+  <text x="658" y="324" fill="#18181b" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">SC-03</text>
+  
+  <text x="552" y="398" fill="#71717a" font-family="monospace" font-size="10">HEADWEAR / CAPS</text>
+  <text x="552" y="416" fill="#18181b" font-family="sans-serif" font-size="13" font-weight="bold">Embroidered Vintage Cap</text>
+  <text x="552" y="445" fill="#059669" font-family="sans-serif" font-size="14" font-weight="bold">₱550.00</text>
+  <rect x="686" y="430" width="78" height="26" rx="6" fill="#18181b" />
+  <text x="725" y="447" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">View Item</text>
+</svg>

@@ -1,94 +1,90 @@
 import { CapstoneProject } from "@/types";
 
 export const capstoneData: CapstoneProject = {
-  title: "Integrated Municipal Public Assistance & Resource Dispatch System",
-  codeName: "Project IM-PARDS",
-  badge: "BSIT Academic Capstone — Flagship Engineering System",
+  title: "e-Biga MIS for Barangay Biga, Tanza, Cavite",
+  codeName: "e-Biga Management Information System",
+  badge: "BSIT Academic Capstone — Flagship Digital System",
   tagline:
-    "An end-to-end digital assistance intake, eligibility verification, and multi-agency resource allocation platform.",
+    "A web-based Management Information System that digitizes resident records and streamlines barangay services, reporting, and document processing.",
   overview:
-    "As the culmination of my BS Information Technology degree, our capstone system was engineered to digitize and automate manual public assistance processing for local government units (LGUs). The platform connects citizen requests, caseworker assessment queues, fund disbursement tracking, and executive analytics into a unified, secure web ecosystem.",
+    "As the flagship capstone project for our BS Information Technology degree, e-Biga MIS was developed specifically for Barangay Biga, Tanza, Cavite. The system modernizes local government operations by replacing manual paper logbooks with a centralized, secure digital platform for resident census data, certificate generation, incident blotter tracking, and administrative reporting.",
   problem:
-    "Citizens seeking emergency financial or medical assistance faced physical queuing for 6-12 hours, paper application loss, and lack of visibility into request status. Caseworkers simultaneously struggled with manual cross-referencing of duplicate claims across government agencies.",
+    "Barangay staff faced significant delays using manual paper-based filing systems and spreadsheets—resulting in long queuing lines for residents requesting clearances, high risk of physical document damage, record duplication, and difficult end-of-month report consolidation.",
   solution:
-    "Designed and developed a multi-tier web application featuring a citizen self-service portal with SMS/email notifications, a caseworker review pipeline with automated duplicate detection algorithms, an inventory dispatch module, and a real-time executive dashboard for resource distribution monitoring.",
+    "Engineered a full-featured web-based Management Information System that centralizes resident profiles, automates instant one-click barangay certificate and clearance generation, tracks blotter records securely, and produces real-time demographic analytics for barangay officials.",
   myRole:
-    "Lead Full-Stack Developer & Database Architect: Led technical architecture planning, designed normalized 3NF database schemas, engineered RESTful API endpoints in Node.js, and implemented the core caseworker review dashboard and reporting modules using Next.js and Tailwind CSS.",
+    "Lead Technical Developer & Systems Implementer: Led the system architecture and database design, developed administrative document generation workflows, integrated data validation mechanisms, and deployed the production system for community usage at ebigatanza.com.",
   technologies: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js",
-    "PostgreSQL",
-    "Prisma ORM",
-    "Framer Motion",
-    "Lucide React"
+    "Web Application",
+    "Database Management",
+    "Responsive UI",
+    "Document Automation",
+    "Security & RBAC",
+    "AI-Assisted Vibe Coding"
   ],
   majorFeatures: [
     {
-      title: "Citizen Intake & Digital Tracking Portal",
+      title: "Resident Census & Household Records",
       description:
-        "Intuitive multi-step application submission with document upload, validation checks, and unique reference tracking codes.",
+        "Centralized database capturing family records, senior citizen classifications, voter statuses, and emergency contact details.",
       iconName: "FileCheck"
     },
     {
-      title: "Caseworker Verification & Fraud Detection",
+      title: "Automated Certificate Issuance",
       description:
-        "Automated cross-matching system that flags duplicate benefit claims across national ID records and date intervals.",
+        "One-click generation and printing of Barangay Clearance, Certificate of Indigency, Certificate of Residency, and Business Clearances.",
+      iconName: "FileText"
+    },
+    {
+      title: "Digital Blotter & Incident Management",
+      description:
+        "Confidential logging of community complaints, mediation hearing schedules, incident resolutions, and case status tracking.",
       iconName: "ShieldAlert"
     },
     {
-      title: "Real-time Resource Allocation & Disbursement",
+      title: "Demographic Analytics & Reporting",
       description:
-        "Centralized ledger managing financial aid limits, medical voucher generation, and emergency goods inventory.",
-      iconName: "Activity"
-    },
-    {
-      title: "Executive Analytics & Geospatial Heatmaps",
-      description:
-        "High-level metrics on fund utilization, turnaround times, and geographical assistance distribution across municipal districts.",
+        "Automated consolidation of monthly barangay summaries, population counts, sector reports, and printable official documents.",
       iconName: "BarChart3"
     }
   ],
   systemHighlights: [
     {
-      title: "End-to-End Auditability",
-      description: "Immutable transactional history logging every caseworker action, status transition, and disbursement event."
+      title: "Fast Document Turnaround",
+      description: "Reduced resident waiting time for official certificates from 30+ minutes of manual handwriting to under 2 minutes."
     },
     {
-      title: "Sub-Second Search & Querying",
-      description: "Optimized database indexes and multi-condition filtering across 10,000+ simulated citizen records."
+      title: "Data Integrity & Verification",
+      description: "Structured relational tables eliminate duplicate resident records and ensure accurate household demographics."
     },
     {
-      title: "Responsive Clerical Interface",
-      description: "Custom keyboard shortcuts, high-contrast typography, and accessible form states designed for rapid daily operations."
+      title: "Role-Based Access Control",
+      description: "Protected administrative access separating Barangay Captain, Secretary, Health Workers, and Triage Clerks."
     },
     {
-      title: "Role-Based Access Security (RBAC)",
-      description: "Granular permissions separating System Admins, Triage Clerks, Social Workers, and Department Heads."
+      title: "Live Production Deployment",
+      description: "Deployed to live domain at https://ebigatanza.com for direct community and office utilization."
     }
   ],
   challenges: [
     {
-      challenge: "Preventing race conditions during simultaneous fund allocation requests across multiple municipal branches.",
+      challenge: "Transitioning legacy handwritten paper records with inconsistent data formats into structured digital tables.",
       resolution:
-        "Implemented database transaction isolation levels and atomic balance deduct checks using Prisma and PostgreSQL transactions."
+        "Created standardized input validation schemas and bulk verification workflows to ensure accurate record migration."
     },
     {
-      challenge: "Handling unreliable network connectivity in remote community extension centers.",
+      challenge: "Ensuring non-technical barangay office staff could navigate and operate the system efficiently.",
       resolution:
-        "Engineered client-side optimistic UI updates with automatic retry queuing and structured error recovery states."
+        "Designed a clean, accessible user interface with intuitive action buttons, clear visual feedback, and quick-print shortcuts."
     }
   ],
   contributions: [
-    "Architected the relational PostgreSQL database schema with 18 normalized tables and strict foreign key integrity.",
-    "Engineered 28+ secure RESTful API endpoints with structured request validation and JWT-based role permissions.",
-    "Built 100% of the caseworker verification queue and dynamic filtering interface using Next.js and TypeScript.",
-    "Conducted rigorous integration testing and authored comprehensive technical system documentation and API schemas."
+    "Architected the relational database schema to model residents, households, certificates, and blotter incidents.",
+    "Built dynamic certificate formatting modules that output printable, formatted official barangay documents.",
+    "Implemented role-scoped security protections ensuring sensitive resident records remain confidential.",
+    "Conducted end-user training sessions for Barangay Biga administrative staff to ensure smooth system adoption."
   ],
-  githubUrl: "https://github.com/brixsese/capstone-resource-dispatch-system",
-  liveUrl: "https://capstone-resource-dispatch.vercel.app",
-  image: "/projects/capstone-showcase.svg"
+  githubUrl: "https://github.com/brixsese27/brixportfolio",
+  liveUrl: "https://ebigatanza.com",
+  image: "/projects/ebiga-mis.svg"
 };

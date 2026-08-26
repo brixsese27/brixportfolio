@@ -108,7 +108,7 @@ export function Navbar() {
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
             </span>
             <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest hidden sm:inline-block">
-              BSIT Developer
+              BSIT • IT Support
             </span>
           </div>
         </Link>

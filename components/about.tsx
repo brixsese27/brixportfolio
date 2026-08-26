@@ -6,11 +6,12 @@ import {
   Briefcase,
   Layers,
   Sparkles,
-  CheckCircle,
+  Phone,
+  Mail,
   Terminal,
-  ShieldCheck,
-  Zap,
-  Target
+  Wrench,
+  Server,
+  Building
 } from "lucide-react";
 
 export function About() {
@@ -25,7 +26,7 @@ export function About() {
             01 // About Me
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
-            Engineering software with purpose &amp; precision.
+            Committed to reliable IT support &amp; technical service.
           </h2>
         </div>
 
@@ -46,7 +47,7 @@ export function About() {
             <div className="pt-6 space-y-4">
               <h3 className="text-sm font-mono uppercase tracking-wider text-brand-600 dark:text-brand-400 font-semibold flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-brand-500" />
-                Core Engineering Principles
+                Work Philosophy &amp; Principles
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -78,7 +79,7 @@ export function About() {
               <div className="flex items-center justify-between border-b border-border pb-4">
                 <div>
                   <div className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
-                    Developer Spec Sheet
+                    IT Candidate Profile
                   </div>
                   <div className="text-xl font-bold text-foreground font-sans mt-0.5">
                     {profileData.name}
@@ -90,17 +91,20 @@ export function About() {
               </div>
 
               {/* Specification Attributes */}
-              <div className="space-y-4 font-mono text-xs">
+              <div className="space-y-3.5 font-mono text-xs">
                 
-                {/* Degree */}
+                {/* Degree & School */}
                 <div className="flex items-start gap-3">
                   <div className="p-2 rounded-lg bg-muted text-muted-foreground mt-0.5">
                     <GraduationCap className="w-4 h-4 text-brand-500" />
                   </div>
                   <div>
-                    <div className="text-muted-foreground text-[11px] uppercase">Degree</div>
+                    <div className="text-muted-foreground text-[11px] uppercase">Education</div>
                     <div className="text-foreground font-semibold text-xs leading-snug">
                       {profileData.degree}
+                    </div>
+                    <div className="text-muted-foreground text-[11px]">
+                      Cavite State University - Trece Martires
                     </div>
                   </div>
                 </div>
@@ -108,12 +112,25 @@ export function About() {
                 {/* Focus */}
                 <div className="flex items-start gap-3">
                   <div className="p-2 rounded-lg bg-muted text-muted-foreground mt-0.5">
-                    <Layers className="w-4 h-4 text-cyan-500" />
+                    <Wrench className="w-4 h-4 text-cyan-500" />
                   </div>
                   <div>
-                    <div className="text-muted-foreground text-[11px] uppercase">Focus &amp; Track</div>
+                    <div className="text-muted-foreground text-[11px] uppercase">Core Specialization</div>
                     <div className="text-foreground font-semibold text-xs leading-snug">
                       {profileData.field}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Internship */}
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-muted text-muted-foreground mt-0.5">
+                    <Building className="w-4 h-4 text-indigo-500" />
+                  </div>
+                  <div>
+                    <div className="text-muted-foreground text-[11px] uppercase">Hospital Internship (486 hrs)</div>
+                    <div className="text-foreground font-semibold text-xs leading-snug">
+                      Gentri Doctors (Hospital IT Dept)
                     </div>
                   </div>
                 </div>
@@ -137,7 +154,7 @@ export function About() {
                     <Briefcase className="w-4 h-4 text-amber-500" />
                   </div>
                   <div>
-                    <div className="text-muted-foreground text-[11px] uppercase">Current Status</div>
+                    <div className="text-muted-foreground text-[11px] uppercase">Availability</div>
                     <div className="text-brand-600 dark:text-brand-400 font-semibold text-xs leading-snug flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
                       {profileData.status}
@@ -150,7 +167,7 @@ export function About() {
               {/* Focus Areas Badges */}
               <div className="pt-4 border-t border-border space-y-2">
                 <div className="text-[11px] font-mono text-muted-foreground uppercase tracking-wider">
-                  Core Competencies
+                  Key Competencies
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {profileData.focusAreas.map((focus, idx) => (

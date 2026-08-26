@@ -8,12 +8,15 @@ import {
   Github,
   Linkedin,
   Mail,
+  Phone,
   Terminal,
-  Code2,
   Cpu,
   Layers,
   Sparkles,
-  CheckCircle2
+  CheckCircle2,
+  Wrench,
+  Server,
+  Laptop
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -52,7 +55,7 @@ export function Hero() {
               </span>
               <span className="text-foreground font-semibold">Available for Opportunities</span>
               <span className="text-muted-foreground/60">•</span>
-              <span className="text-brand-600 dark:text-brand-400 font-medium">Junior / Associate Developer</span>
+              <span className="text-brand-600 dark:text-brand-400 font-medium">IT Support Specialist / Helpdesk</span>
             </div>
 
             {/* Main Label & Large Typography */}
@@ -98,9 +101,27 @@ export function Hero() {
             </div>
 
             {/* Social & Contact Direct Links */}
-            <div className="flex items-center gap-5 pt-4 border-t border-border/80 w-full">
+            <div className="flex flex-wrap items-center gap-5 pt-4 border-t border-border/80 w-full">
               <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Connect:</span>
               
+              <a
+                href={`mailto:${profileData.email}`}
+                className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary flex items-center gap-1.5 text-xs font-mono"
+                aria-label="Send Email"
+              >
+                <Mail className="w-4 h-4 text-brand-500" />
+                <span>{profileData.email}</span>
+              </a>
+
+              <a
+                href={`tel:${profileData.phone}`}
+                className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary flex items-center gap-1.5 text-xs font-mono"
+                aria-label="Call Phone"
+              >
+                <Phone className="w-4 h-4 text-cyan-500" />
+                <span>{profileData.phone}</span>
+              </a>
+
               <a
                 href={profileData.github}
                 target="_blank"
@@ -108,7 +129,7 @@ export function Hero() {
                 className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 aria-label="Brix Sese GitHub"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-4 h-4" />
               </a>
 
               <a
@@ -118,21 +139,12 @@ export function Hero() {
                 className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 aria-label="Brix Sese LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
-              </a>
-
-              <a
-                href={`mailto:${profileData.email}`}
-                className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary flex items-center gap-1.5 text-xs font-mono"
-                aria-label="Send Email"
-              >
-                <Mail className="w-5 h-5" />
-                <span className="hidden sm:inline-block text-muted-foreground">{profileData.email}</span>
+                <Linkedin className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-          {/* Right Column: Distinctive Interactive Developer Workstation Inspector */}
+          {/* Right Column: Distinctive Interactive IT Support Workstation Inspector */}
           <div className="lg:col-span-5 w-full">
             <div className="terminal-window bg-card/90 border border-border shadow-2xl backdrop-blur-md">
               
@@ -144,11 +156,11 @@ export function Hero() {
                   <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
                 </div>
                 <div className="text-[11px] font-mono text-muted-foreground flex items-center gap-1.5">
-                  <Terminal className="w-3.5 h-3.5 text-brand-500" />
-                  <span>developer-spec.ts</span>
+                  <Laptop className="w-3.5 h-3.5 text-brand-500" />
+                  <span>it-technician-spec.ts</span>
                 </div>
                 <div className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-500/10 text-brand-600 dark:text-brand-400 font-semibold border border-brand-500/20">
-                  TypeScript v5
+                  CavSU BSIT
                 </div>
               </div>
 
@@ -164,8 +176,8 @@ export function Hero() {
                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
-                  <Code2 className="w-3.5 h-3.5 text-brand-500" />
-                  Interface
+                  <Wrench className="w-3.5 h-3.5 text-brand-500" />
+                  IT Profile
                 </button>
                 <button
                   type="button"
@@ -178,7 +190,7 @@ export function Hero() {
                   )}
                 >
                   <Layers className="w-3.5 h-3.5 text-cyan-500" />
-                  Core Stack
+                  Skill Matrix
                 </button>
                 <button
                   type="button"
@@ -190,125 +202,128 @@ export function Hero() {
                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
-                  <Cpu className="w-3.5 h-3.5 text-indigo-500" />
-                  Telemetry
+                  <Server className="w-3.5 h-3.5 text-indigo-500" />
+                  Experience
                 </button>
               </div>
 
-              {/* Tab Content 1: TypeScript Interface Contract */}
+              {/* Tab Content 1: TypeScript Profile Contract */}
               {activeTab === "spec" && (
                 <div className="p-4 sm:p-5 font-mono text-xs text-foreground/90 space-y-1.5 leading-relaxed overflow-x-auto">
-                  <div className="text-muted-foreground">{"// Developer Profile Contract"}</div>
+                  <div className="text-muted-foreground">{"// IT Support Technician Specification"}</div>
                   <div>
                     <span className="text-indigo-500 dark:text-indigo-400 font-bold">interface</span>{" "}
-                    <span className="text-cyan-500 font-semibold">SoftwareEngineer</span> {"{"}
+                    <span className="text-cyan-600 dark:text-cyan-400 font-semibold">ITSupportSpecialist</span> {"{"}
                   </div>
                   <div className="pl-4">
                     <span className="text-muted-foreground">name:</span>{" "}
-                    <span className="text-emerald-500 dark:text-emerald-400">&quot;Brix Sese&quot;</span>;
+                    <span className="text-emerald-600 dark:text-emerald-400">&quot;Brix Sese&quot;</span>;
                   </div>
                   <div className="pl-4">
                     <span className="text-muted-foreground">degree:</span>{" "}
-                    <span className="text-emerald-500 dark:text-emerald-400">&quot;BS in Information Technology&quot;</span>;
+                    <span className="text-emerald-600 dark:text-emerald-400">&quot;BS in Information Technology&quot;</span>;
                   </div>
                   <div className="pl-4">
-                    <span className="text-muted-foreground">specialization:</span>{" "}
-                    <span className="text-emerald-500 dark:text-emerald-400">&quot;Full-Stack &amp; Web Systems&quot;</span>;
+                    <span className="text-muted-foreground">university:</span>{" "}
+                    <span className="text-emerald-600 dark:text-emerald-400">&quot;Cavite State University - Trece Martires&quot;</span>;
                   </div>
                   <div className="pl-4">
-                    <span className="text-muted-foreground">status:</span>{" "}
-                    <span className="text-amber-500">&quot;Available for Full-time / Junior Roles&quot;</span>;
+                    <span className="text-muted-foreground">focus:</span>{" "}
+                    <span className="text-emerald-600 dark:text-emerald-400">&quot;IT Support &amp; Technical Maintenance&quot;</span>;
                   </div>
                   <div className="pl-4">
-                    <span className="text-muted-foreground">academicCapstone:</span>{" "}
-                    <span className="text-emerald-500 dark:text-emerald-400">&quot;IM-PARDS Assistance Dispatch System&quot;</span>;
+                    <span className="text-muted-foreground">hospitalOJT:</span>{" "}
+                    <span className="text-cyan-600 dark:text-cyan-400">&quot;Gentri Doctors Hospital (486 hrs)&quot;</span>;
                   </div>
                   <div className="pl-4">
-                    <span className="text-muted-foreground">workingStyle:</span> [
-                    <span className="text-cyan-400">&quot;Clean Architecture&quot;</span>,{" "}
-                    <span className="text-cyan-400">&quot;Accessible UI&quot;</span>,{" "}
-                    <span className="text-cyan-400">&quot;Type Safe&quot;</span>];
+                    <span className="text-muted-foreground">capstoneMIS:</span>{" "}
+                    <span className="text-emerald-600 dark:text-emerald-400">&quot;e-Biga MIS (ebigatanza.com)&quot;</span>;
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-muted-foreground">vibeCoding:</span> [
+                    <span className="text-amber-600 dark:text-amber-400">&quot;Gemini&quot;</span>,{" "}
+                    <span className="text-amber-600 dark:text-amber-400">&quot;ChatGPT&quot;</span>,{" "}
+                    <span className="text-amber-600 dark:text-amber-400">&quot;Claude Code&quot;</span>];
                   </div>
                   <div>{"}"}</div>
                 </div>
               )}
 
-              {/* Tab Content 2: Core Stack Matrix */}
+              {/* Tab Content 2: Technical Skill Matrix */}
               {activeTab === "stack" && (
                 <div className="p-4 sm:p-5 space-y-3 font-mono text-xs">
                   <div className="flex items-center justify-between text-muted-foreground text-[11px] pb-1 border-b border-border">
-                    <span>LAYER</span>
-                    <span>PRIMARY TECHNOLOGIES</span>
+                    <span>AREA</span>
+                    <span>CORE CAPABILITIES</span>
                   </div>
 
                   <div className="flex items-start justify-between">
-                    <span className="text-brand-600 dark:text-brand-400 font-semibold">Frontend:</span>
+                    <span className="text-brand-600 dark:text-brand-400 font-semibold">Hardware:</span>
                     <div className="flex flex-wrap gap-1.5 justify-end">
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Next.js 14</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">TypeScript</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Tailwind CSS</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">PC Troubleshooting</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Cleaning &amp; Maintenance</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Printer Setup</span>
                     </div>
                   </div>
 
                   <div className="flex items-start justify-between">
-                    <span className="text-cyan-600 dark:text-cyan-400 font-semibold">Backend:</span>
+                    <span className="text-cyan-600 dark:text-cyan-400 font-semibold">OS / Software:</span>
                     <div className="flex flex-wrap gap-1.5 justify-end">
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Node.js</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Express</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">REST APIs</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Windows 10/11</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">MS Office 365</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">BizBox HIS</span>
                     </div>
                   </div>
 
                   <div className="flex items-start justify-between">
-                    <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Database:</span>
+                    <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Network:</span>
                     <div className="flex flex-wrap gap-1.5 justify-end">
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">MySQL</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">PostgreSQL</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Prisma</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">LAN / Cabling</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Wi-Fi &amp; Routers</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Data Backups</span>
                     </div>
                   </div>
 
                   <div className="flex items-start justify-between">
-                    <span className="text-amber-600 dark:text-amber-400 font-semibold">Tools:</span>
+                    <span className="text-amber-600 dark:text-amber-400 font-semibold">Vibe Coding:</span>
                     <div className="flex flex-wrap gap-1.5 justify-end">
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Git</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">GitHub</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">VS Code</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Figma</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">AI Coding Agents</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Next.js</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">e-Biga MIS</span>
                     </div>
                   </div>
                 </div>
               )}
 
-              {/* Tab Content 3: Telemetry & Quality Standards */}
+              {/* Tab Content 3: Field Experience & Verification */}
               {activeTab === "manifest" && (
                 <div className="p-4 sm:p-5 space-y-3 font-mono text-xs">
                   <div className="space-y-2">
                     <div className="flex items-center justify-between p-2 rounded bg-muted/40">
                       <span className="text-muted-foreground flex items-center gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
-                        Static Vercel Deployment
+                        Gentri Doctors Hospital OJT
                       </span>
-                      <span className="text-brand-600 dark:text-brand-400 font-bold">100% Ready</span>
+                      <span className="text-brand-600 dark:text-brand-400 font-bold">486 Hours Completed</span>
                     </div>
                     <div className="flex items-center justify-between p-2 rounded bg-muted/40">
                       <span className="text-muted-foreground flex items-center gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
-                        TypeScript Strict Mode
+                        Barangay Capstone System
                       </span>
-                      <span className="text-brand-600 dark:text-brand-400 font-bold">Passing</span>
+                      <span className="text-brand-600 dark:text-brand-400 font-bold">Live at ebigatanza.com</span>
                     </div>
                     <div className="flex items-center justify-between p-2 rounded bg-muted/40">
                       <span className="text-muted-foreground flex items-center gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
-                        Lighthouse Accessibility
+                        Degree Program Status
                       </span>
-                      <span className="text-brand-600 dark:text-brand-400 font-bold">98+ Score</span>
+                      <span className="text-brand-600 dark:text-brand-400 font-bold">CavSU BSIT Graduate</span>
                     </div>
                   </div>
 
                   <div className="text-[11px] text-muted-foreground pt-1 text-center">
-                    Engineered for zero layout shift &amp; instant navigation.
+                    Trained for fast-response troubleshooting &amp; user support.
                   </div>
                 </div>
               )}
@@ -317,9 +332,9 @@ export function Hero() {
               <div className="px-4 py-2.5 bg-muted/50 border-t border-border flex items-center justify-between text-[11px] font-mono text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-brand-500 inline-block" />
-                  <span>Ready to collaborate</span>
+                  <span>Ready for IT Support roles</span>
                 </div>
-                <span>Ctrl + Click to inspect</span>
+                <span>Trece Martires City, Cavite</span>
               </div>
             </div>
           </div>

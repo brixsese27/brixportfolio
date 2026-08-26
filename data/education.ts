@@ -4,29 +4,51 @@ export const educationData: EducationItem[] = [
   {
     id: "edu-1",
     degree: "Bachelor of Science in Information Technology",
-    major: "Software & Web Development Track",
-    institution: "[University / College Name]", // [INSERT SCHOOL INFORMATION HERE]
-    location: "[City, Philippines]", // [INSERT LOCATION]
-    period: "2020 – 2024", // [INSERT GRADUATION YEAR]
-    status: "Graduated",
+    major: "Information Technology Track",
+    institution: "Cavite State University - Trece Martires Campus",
+    location: "Trece Martires City, Cavite",
+    period: "2022 – August 19, 2026",
+    status: "Graduating / BSIT Graduate",
     distinctions: [
-      "[Academic Distinction / Dean's Lister if applicable]",
-      "Capstone Project of the Year Candidate"
+      "Completed 486 Hours IT Internship at Gentri Doctors Hospital",
+      "e-Biga MIS Barangay Capstone Project Developer"
     ],
     coursework: [
-      "Software Engineering & SDLC",
+      "Computer Hardware & Software Servicing",
+      "Systems Administration & Maintenance",
+      "Local Area Networking & Cabling",
+      "Database Management Systems",
       "Web Systems & Technologies",
-      "Database Management Systems (RDBMS)",
-      "Systems Analysis & Design",
-      "Data Structures & Algorithms",
-      "Object-Oriented Programming (OOP)",
       "Information Assurance & Security",
-      "IT Project Management & Quality Assurance"
+      "IT Helpdesk & End-User Support",
+      "Management Information Systems (MIS)"
     ],
     highlights: [
-      "Specialized in modern web engineering, database architecture, and full-stack software development.",
-      "Completed 480+ required OJT industry hours with distinction in technical contributions.",
-      "Served as technical lead on flagship academic software systems and capstone development."
+      "Specialized in practical IT support, hardware maintenance, network setup, and digital management systems.",
+      "Completed 486 hours of hospital IT department training at Gentri Doctors.",
+      "Spearheaded technical development of the e-Biga Management Information System (ebigatanza.com)."
+    ]
+  },
+  {
+    id: "edu-2",
+    degree: "Senior High School — ICT Strand",
+    major: "Information and Communication Technology (Technical-Vocational-Livelihood)",
+    institution: "Notre Dame of Trece Martirez",
+    location: "Trece Martires City, Cavite",
+    period: "2020 – 2022",
+    status: "Graduated",
+    distinctions: [
+      "ICT Technical Skills Foundation"
+    ],
+    coursework: [
+      "Computer Systems Servicing (CSS)",
+      "Basic PC Assembly & Hardware Diagnosis",
+      "Computer Networking & RJ-45 Crimping",
+      "Productivity Software & File Management"
+    ],
+    highlights: [
+      "Built core foundations in computer assembly, operating system installation, and hardware servicing.",
+      "Developed strong discipline in technical problem-solving and office productivity software."
     ]
   }
 ];

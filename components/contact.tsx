@@ -4,6 +4,8 @@ import * as React from "react";
 import { profileData } from "@/data/profile";
 import {
   Mail,
+  Phone,
+  MapPin,
   Copy,
   Check,
   Github,
@@ -11,14 +13,13 @@ import {
   FileDown,
   Terminal,
   Send,
-  Sparkles,
   ArrowRight,
   MessageSquare
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export function Contact() {
-  const [copied, setCopied] = React.useState(false);
+  const [emailCopied, setEmailCopied] = React.useState(false);
+  const [phoneCopied, setPhoneCopied] = React.useState(false);
   const [formState, setFormState] = React.useState({
     name: "",
     email: "",
@@ -31,20 +32,28 @@ export function Contact() {
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText(profileData.email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
-    } catch (err) {
-      // Fallback
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2500);
+    } catch {
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2500);
+    }
+  };
+
+  const handleCopyPhone = async () => {
+    try {
+      await navigator.clipboard.writeText(profileData.phone);
+      setPhoneCopied(true);
+      setTimeout(() => setPhoneCopied(false), 2500);
+    } catch {
+      setPhoneCopied(true);
+      setTimeout(() => setPhoneCopied(false), 2500);
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate clean client-side submission with mailto direct fallback option
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
@@ -52,7 +61,7 @@ export function Contact() {
   };
 
   const handleMailtoDirect = () => {
-    const subject = encodeURIComponent(formState.subject || `Inquiry from ${formState.name || "Portfolio Visitor"}`);
+    const subject = encodeURIComponent(formState.subject || `IT Support Inquiry from ${formState.name || "Recruiter"}`);
     const body = encodeURIComponent(`${formState.message}\n\nFrom: ${formState.name} (${formState.email})`);
     window.location.href = `mailto:${profileData.email}?subject=${subject}&body=${body}`;
   };
@@ -74,54 +83,99 @@ export function Contact() {
             Let&apos;s build something meaningful.
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground mt-4 leading-relaxed">
-            I am currently open to full-time junior developer positions, associate software engineering roles, and collaborative projects. Feel free to reach out via email or connect on LinkedIn.
+            I am currently open to full-time **IT Support Specialist**, **Helpdesk Technician**, **Technical Support**, and IT maintenance roles. Feel free to connect via phone, email, or LinkedIn.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
-          {/* Left Column: Direct Contact Details & Interactive Copy Widget */}
+          {/* Left Column: Direct Contact Details & Interactive Copy Widgets */}
           <div className="lg:col-span-5 space-y-6">
             
-            {/* Quick Email Copy Card */}
+            {/* Quick Email & Phone Contact Card */}
             <div className="p-6 sm:p-7 rounded-2xl bg-card border border-border shadow-md space-y-5">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
-                  Direct Inquiries
+                  Direct Contact Information
                 </span>
                 <span className="flex items-center gap-1.5 text-[11px] font-mono text-brand-600 dark:text-brand-400 font-semibold">
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-ping" />
-                  Fast Response
+                  Available for Hire
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-muted/60 border border-border flex items-center justify-between gap-3">
+              {/* Email Row */}
+              <div className="p-3.5 rounded-xl bg-muted/60 border border-border flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3 overflow-hidden">
                   <Mail className="w-4 h-4 text-brand-500 shrink-0" />
-                  <span className="font-mono text-xs sm:text-sm font-semibold text-foreground truncate select-all">
-                    {profileData.email}
-                  </span>
+                  <div className="overflow-hidden">
+                    <div className="text-[10px] font-mono text-muted-foreground uppercase">Email Address</div>
+                    <div className="font-mono text-xs sm:text-sm font-semibold text-foreground truncate select-all">
+                      {profileData.email}
+                    </div>
+                  </div>
                 </div>
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="p-2 rounded-lg bg-card hover:bg-accent border border-border text-foreground transition-all shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-sm"
+                  className="p-2 rounded-lg bg-card hover:bg-accent border border-border text-foreground transition-all shrink-0 shadow-sm"
                   title="Copy email address"
                   aria-label="Copy email address"
                 >
-                  {copied ? (
+                  {emailCopied ? (
                     <Check className="w-4 h-4 text-brand-500" />
                   ) : (
                     <Copy className="w-4 h-4 text-muted-foreground" />
                   )}
                 </button>
               </div>
-
-              {copied && (
+              {emailCopied && (
                 <div className="text-xs font-mono text-brand-600 dark:text-brand-400 text-center animate-in fade-in duration-150 font-semibold">
                   ✓ Email copied to clipboard!
                 </div>
               )}
+
+              {/* Phone Row */}
+              <div className="p-3.5 rounded-xl bg-muted/60 border border-border flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 overflow-hidden">
+                  <Phone className="w-4 h-4 text-cyan-500 shrink-0" />
+                  <div className="overflow-hidden">
+                    <div className="text-[10px] font-mono text-muted-foreground uppercase">Contact Number</div>
+                    <a href={`tel:${profileData.phone}`} className="font-mono text-xs sm:text-sm font-semibold text-foreground hover:text-primary transition-colors">
+                      {profileData.phone}
+                    </a>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleCopyPhone}
+                  className="p-2 rounded-lg bg-card hover:bg-accent border border-border text-foreground transition-all shrink-0 shadow-sm"
+                  title="Copy phone number"
+                  aria-label="Copy phone number"
+                >
+                  {phoneCopied ? (
+                    <Check className="w-4 h-4 text-brand-500" />
+                  ) : (
+                    <Copy className="w-4 h-4 text-muted-foreground" />
+                  )}
+                </button>
+              </div>
+              {phoneCopied && (
+                <div className="text-xs font-mono text-cyan-600 dark:text-cyan-400 text-center animate-in fade-in duration-150 font-semibold">
+                  ✓ Phone number copied to clipboard!
+                </div>
+              )}
+
+              {/* Location Row */}
+              <div className="p-3.5 rounded-xl bg-muted/60 border border-border flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-rose-500 shrink-0" />
+                <div>
+                  <div className="text-[10px] font-mono text-muted-foreground uppercase">Current Address</div>
+                  <div className="font-mono text-xs font-semibold text-foreground">
+                    {profileData.location}
+                  </div>
+                </div>
+              </div>
 
               {/* Primary Direct Mailto Action */}
               <a
@@ -129,7 +183,7 @@ export function Contact() {
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-mono text-xs font-semibold transition-all shadow-md"
               >
                 <Mail className="w-4 h-4" />
-                Compose Direct Email
+                Send Direct Email
               </a>
             </div>
 
@@ -144,7 +198,7 @@ export function Contact() {
                 <Github className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
                 <div>
                   <div className="text-xs font-mono font-bold text-foreground">GitHub</div>
-                  <div className="text-[11px] text-muted-foreground font-mono">Explore Code</div>
+                  <div className="text-[11px] text-muted-foreground font-mono">Repositories</div>
                 </div>
               </a>
 
@@ -157,7 +211,7 @@ export function Contact() {
                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-blue-500 transition-colors" />
                 <div>
                   <div className="text-xs font-mono font-bold text-foreground">LinkedIn</div>
-                  <div className="text-[11px] text-muted-foreground font-mono">Connect Profile</div>
+                  <div className="text-[11px] text-muted-foreground font-mono">Professional Profile</div>
                 </div>
               </a>
 
@@ -173,7 +227,7 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-mono font-bold text-foreground">Curriculum Vitae / Resume</div>
-                    <div className="text-[11px] text-muted-foreground font-mono">PDF Format (Latest Version)</div>
+                    <div className="text-[11px] text-muted-foreground font-mono">Official PDF Document</div>
                   </div>
                 </div>
                 <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all" />
@@ -189,10 +243,10 @@ export function Contact() {
               <div className="flex items-center justify-between border-b border-border pb-4">
                 <div>
                   <h3 className="text-lg font-bold text-foreground font-sans">
-                    Send a Direct Message
+                    Send a Direct Inquiry
                   </h3>
                   <p className="text-xs text-muted-foreground font-mono">
-                    Client-side message composer (no server dependency)
+                    For job opportunities, interviews, or technical consultations
                   </p>
                 </div>
                 <MessageSquare className="w-5 h-5 text-brand-500" />
@@ -204,9 +258,9 @@ export function Contact() {
                     <Check className="w-6 h-6" />
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-lg font-bold text-foreground">Message Prepared!</h4>
+                    <h4 className="text-lg font-bold text-foreground">Inquiry Ready!</h4>
                     <p className="text-xs text-muted-foreground max-w-sm mx-auto">
-                      Thank you for reaching out! Click below to send this directly through your email client or copy to clipboard.
+                      Thank you for reaching out! Click below to send this directly through your email client.
                     </p>
                   </div>
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -234,13 +288,13 @@ export function Contact() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label htmlFor="contact-name" className="text-foreground font-semibold">
-                        Your Name <span className="text-brand-500">*</span>
+                        Your Name / Company <span className="text-brand-500">*</span>
                       </label>
                       <input
                         id="contact-name"
                         type="text"
                         required
-                        placeholder="e.g. Jane Doe / Recruiter"
+                        placeholder="e.g. HR Manager / Company"
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                         className="w-full px-3.5 py-2.5 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary text-foreground placeholder:text-muted-foreground outline-none transition-colors"
@@ -265,12 +319,12 @@ export function Contact() {
 
                   <div className="space-y-1.5">
                     <label htmlFor="contact-subject" className="text-foreground font-semibold">
-                      Subject / Opportunity
+                      Subject / Position
                     </label>
                     <input
                       id="contact-subject"
                       type="text"
-                      placeholder="e.g. Junior Frontend Role / Project Discussion"
+                      placeholder="e.g. IT Support Specialist Role / Interview Request"
                       value={formState.subject}
                       onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary text-foreground placeholder:text-muted-foreground outline-none transition-colors"
@@ -285,7 +339,7 @@ export function Contact() {
                       id="contact-message"
                       rows={5}
                       required
-                      placeholder="Write your message or inquiry here..."
+                      placeholder="Write your message or role details here..."
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-muted/50 border border-border focus:border-primary focus:ring-1 focus:ring-primary text-foreground placeholder:text-muted-foreground outline-none transition-colors resize-y"
@@ -294,7 +348,7 @@ export function Contact() {
 
                   <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-[11px] text-muted-foreground">
-                      No automated bots or server storage.
+                      Direct transmission with email backup.
                     </p>
 
                     <button
