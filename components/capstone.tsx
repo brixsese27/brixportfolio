@@ -163,7 +163,7 @@ export function Capstone() {
               <Terminal className="w-4 h-4 text-brand-500" />
               System Modules &amp; Capabilities
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {capstoneData.majorFeatures.map((feat, idx) => (
                 <div
                   key={idx}

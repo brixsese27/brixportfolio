@@ -23,7 +23,7 @@ export const capstoneData: CapstoneProject = {
   tagline:
     "Web-based Management Information System for Barangay Biga that digitizes resident records and streamlines barangay services, reporting, and document processing.",
   overview:
-    "A web-based Management Information System (MIS) engineered for Barangay Biga, Tanza, Cavite. The platform modernizes local government operations by digitizing resident census records, automating barangay clearances and certificates, managing incident blotters, and delivering automated SMS notifications.",
+    "A web-based Management Information System (MIS) engineered for Barangay Biga, Tanza, Cavite. The platform modernizes local government operations by digitizing resident census records, automating barangay clearances and certificates, and delivering automated SMS notifications.",
   problem:
     "Barangay staff previously handled resident records and document requests using manual handwritten logbooks and paper files, resulting in long waiting queues, misplaced documents, and time-consuming report preparation.",
   solution:
@@ -50,12 +50,6 @@ export const capstoneData: CapstoneProject = {
       description:
         "Instant generation and printing of Barangay Clearance, Indigency, and Residency certificates.",
       iconName: "FileText"
-    },
-    {
-      title: "Digital Blotter & Incident Tracking",
-      description:
-        "Confidential logging of community complaints, hearing schedules, and incident resolutions.",
-      iconName: "ShieldAlert"
     },
     {
       title: "SMS Notifications via Semaphore",
