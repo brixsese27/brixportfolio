@@ -101,10 +101,15 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-6px)" },
         },
+        "dropdown-slide": {
+          "0%": { opacity: "0", transform: "translateY(-14px) scale(0.97)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
       },
       animation: {
         "pulse-subtle": "pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         float: "float 6s ease-in-out infinite",
+        "dropdown-slide": "dropdown-slide 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
       backgroundImage: {
         "grid-pattern": "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",

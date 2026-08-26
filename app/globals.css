@@ -57,6 +57,9 @@
     scroll-behavior: smooth;
     color-scheme: light dark;
   }
+  section {
+    scroll-margin-top: 80px;
+  }
   body {
     @apply bg-background text-foreground antialiased selection:bg-brand-500/20 selection:text-brand-400;
     font-feature-settings: "rlig" 1, "calt" 1;

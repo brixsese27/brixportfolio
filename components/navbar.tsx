@@ -5,7 +5,7 @@ import Link from "next/link";
 import { navItems } from "@/data/navigation";
 import { profileData } from "@/data/profile";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Menu, X, FileDown, ChevronRight, Phone, Mail } from "lucide-react";
+import { Menu, X, FileDown, ChevronRight, Phone, Mail, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -20,7 +20,7 @@ export function Navbar() {
 
       // Determine active section using scroll calculation
       const sections = navItems.map((item) => item.href.replace("#", ""));
-      const scrollPosition = window.scrollY + 140;
+      const scrollPosition = window.scrollY + 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const sectionId = sections[i];
@@ -77,10 +77,10 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 transition-all duration-200",
+          "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
           scrolled
             ? "bg-background/90 backdrop-blur-md border-b border-border/80 shadow-sm py-2.5 sm:py-3"
-            : "bg-background/60 backdrop-blur-sm sm:bg-transparent py-3 sm:py-5 border-b border-border/40 sm:border-transparent"
+            : "bg-background/70 backdrop-blur-sm sm:bg-transparent py-3 sm:py-5 border-b border-border/40 sm:border-transparent"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -141,53 +141,57 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Controls (Theme Toggle + Mobile Menu Trigger) */}
+          {/* Mobile Controls (Theme Toggle + Animated Hamburger Menu Trigger) */}
           <div className="flex lg:hidden items-center gap-2">
             <ThemeToggle />
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="p-2 rounded-xl border border-border bg-card text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors shadow-sm cursor-pointer"
+              className={cn(
+                "p-2 rounded-xl border border-border bg-card text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-all shadow-sm cursor-pointer",
+                mobileMenuOpen && "bg-accent border-primary/50 text-primary"
+              )}
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle mobile menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5 text-primary" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? (
+                <X className="w-5 h-5 text-primary animate-in spin-in-90 duration-200" />
+              ) : (
+                <Menu className="w-5 h-5 transition-transform" />
+              )}
             </button>
           </div>
         </div>
       </header>
 
-      {/* Fullscreen Mobile Navigation Modal Drawer */}
+      {/* Smooth Backdrop Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden bg-background/98 backdrop-blur-2xl flex flex-col justify-between p-5 overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
+        <div
+          onClick={() => setMobileMenuOpen(false)}
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden animate-in fade-in duration-300"
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Smooth Dropdown Menu Container */}
+      {mobileMenuOpen && (
+        <div className="fixed top-[62px] sm:top-[68px] inset-x-3 sm:inset-x-6 z-50 lg:hidden max-h-[calc(100vh-80px)] overflow-y-auto bg-card/95 dark:bg-card/95 backdrop-blur-2xl border border-border/80 rounded-2xl shadow-2xl p-4 sm:p-5 animate-dropdown-slide transition-all duration-300 space-y-4">
           
-          {/* Top Bar inside Mobile Drawer */}
-          <div className="flex items-center justify-between pb-4 border-b border-border">
-            <div className="flex flex-col">
-              <span className="font-mono text-base font-bold text-foreground flex items-center gap-1.5">
-                {profileData.name}
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-500" />
-              </span>
-              <span className="text-[10px] font-mono text-muted-foreground uppercase">
+          {/* Header Row */}
+          <div className="flex items-center justify-between pb-3 border-b border-border/70">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-muted-foreground">
                 Navigation Menu
               </span>
             </div>
-
-            <div className="flex items-center gap-2">
-              <ThemeToggle />
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-2 rounded-xl border border-border bg-card text-foreground hover:bg-accent transition-colors cursor-pointer"
-                aria-label="Close menu"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+            <span className="text-[10px] font-mono text-muted-foreground">
+              {navItems.length} Sections
+            </span>
           </div>
 
-          {/* Nav Items List */}
-          <div className="py-6 space-y-1.5">
+          {/* Navigation Links List */}
+          <nav className="grid grid-cols-1 gap-1.5" aria-label="Mobile Navigation">
             {navItems.map((item) => {
               const sectionId = item.href.replace("#", "");
               const isActive = activeSection === sectionId;
@@ -197,30 +201,39 @@ export function Navbar() {
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={cn(
-                    "flex items-center justify-between px-4 py-3 rounded-xl text-sm font-mono transition-all",
+                    "flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-mono transition-all duration-200 group",
                     isActive
-                      ? "bg-primary text-primary-foreground font-bold shadow-md"
-                      : "text-foreground hover:bg-muted/80 bg-card/40 border border-border/50"
+                      ? "bg-primary text-primary-foreground font-bold shadow-sm"
+                      : "text-foreground hover:bg-muted/70 hover:translate-x-1"
                   )}
                 >
-                  <span>{item.label}</span>
+                  <div className="flex items-center gap-2.5">
+                    <span
+                      className={cn(
+                        "w-1.5 h-1.5 rounded-full transition-all",
+                        isActive ? "bg-primary-foreground" : "bg-muted-foreground/40 group-hover:bg-brand-500"
+                      )}
+                    />
+                    <span>{item.label}</span>
+                  </div>
+
                   <ChevronRight
                     className={cn(
-                      "w-4 h-4 transition-transform",
-                      isActive ? "text-primary-foreground translate-x-1" : "text-muted-foreground"
+                      "w-3.5 h-3.5 transition-transform",
+                      isActive ? "text-primary-foreground translate-x-0.5" : "text-muted-foreground group-hover:translate-x-0.5 group-hover:text-foreground"
                     )}
                   />
                 </a>
               );
             })}
-          </div>
+          </nav>
 
-          {/* Bottom Actions inside Mobile Drawer */}
-          <div className="pt-4 border-t border-border space-y-3">
+          {/* Action Row */}
+          <div className="pt-3 border-t border-border/70 space-y-2.5">
             <a
               href={profileData.resumeUrl}
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-xs font-mono font-bold bg-primary text-primary-foreground shadow-md hover:bg-primary/90 transition-all"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-xs font-mono font-bold bg-primary text-primary-foreground shadow-md hover:bg-primary/90 transition-all"
             >
               <FileDown className="w-4 h-4" />
               View &amp; Print Resume
@@ -229,22 +242,22 @@ export function Navbar() {
             <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono">
               <a
                 href={`mailto:${profileData.email}`}
-                className="p-2.5 rounded-xl border border-border bg-card text-foreground flex items-center justify-center gap-1.5 hover:bg-accent"
+                className="p-2 rounded-xl border border-border bg-muted/40 text-foreground flex items-center justify-center gap-1.5 hover:bg-muted/80 transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-brand-500" />
                 Email
               </a>
               <a
                 href={`tel:${profileData.phone}`}
-                className="p-2.5 rounded-xl border border-border bg-card text-foreground flex items-center justify-center gap-1.5 hover:bg-accent"
+                className="p-2 rounded-xl border border-border bg-muted/40 text-foreground flex items-center justify-center gap-1.5 hover:bg-muted/80 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-cyan-500" />
                 Call
               </a>
             </div>
 
-            <p className="text-center text-[10px] font-mono text-muted-foreground pt-1">
-              {profileData.status} • {profileData.location}
+            <p className="text-center text-[10px] font-mono text-muted-foreground pt-0.5">
+              {profileData.status}
             </p>
           </div>
 
