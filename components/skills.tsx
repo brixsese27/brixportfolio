@@ -169,14 +169,6 @@ export function Skills() {
                   ))}
                 </div>
               </div>
-
-              <div className="pt-4 mt-6 border-t border-border/60 flex items-center justify-between text-[11px] font-mono text-muted-foreground">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
-                  Production Tested
-                </span>
-                <span>Semantic &amp; Responsive</span>
-              </div>
             </div>
           ))}
         </div>

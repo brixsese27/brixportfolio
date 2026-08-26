@@ -241,9 +241,10 @@ export function Hero() {
                   </div>
                   <div className="pl-4">
                     <span className="text-muted-foreground">vibeCoding:</span> [
-                    <span className="text-amber-600 dark:text-amber-400">&quot;Gemini&quot;</span>,{" "}
-                    <span className="text-amber-600 dark:text-amber-400">&quot;ChatGPT&quot;</span>,{" "}
-                    <span className="text-amber-600 dark:text-amber-400">&quot;Claude Code&quot;</span>];
+                    <span className="text-amber-600 dark:text-amber-400">&quot;Cursor AI&quot;</span>,{" "}
+                    <span className="text-amber-600 dark:text-amber-400">&quot;Claude Code&quot;</span>,{" "}
+                    <span className="text-amber-600 dark:text-amber-400">&quot;Codex&quot;</span>,{" "}
+                    <span className="text-amber-600 dark:text-amber-400">&quot;Devin AI&quot;</span>];
                   </div>
                   <div>{"}"}</div>
                 </div>
@@ -285,11 +286,12 @@ export function Hero() {
                   </div>
 
                   <div className="flex items-start justify-between">
-                    <span className="text-amber-600 dark:text-amber-400 font-semibold">Vibe Coding:</span>
+                    <span className="text-amber-600 dark:text-amber-400 font-semibold">AI Tools:</span>
                     <div className="flex flex-wrap gap-1.5 justify-end">
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">AI Coding Agents</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Next.js</span>
-                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">e-Biga MIS</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Cursor AI</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Claude Code</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Codex</span>
+                      <span className="px-2 py-0.5 rounded bg-muted text-foreground">Devin AI</span>
                     </div>
                   </div>
                 </div>

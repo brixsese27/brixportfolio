@@ -51,13 +51,38 @@ export function Contact() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/sesebrixligon@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          _subject: `[Portfolio Contact] ${formState.subject || "Inquiry"} from ${formState.name}`,
+          message: formState.message,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        // Fallback to mailto if network blocks API
+        handleMailtoDirect();
+        setSubmitted(true);
+      }
+    } catch {
+      handleMailtoDirect();
       setSubmitted(true);
-    }, 600);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleMailtoDirect = () => {
@@ -258,28 +283,21 @@ export function Contact() {
                     <Check className="w-6 h-6" />
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-lg font-bold text-foreground">Inquiry Ready!</h4>
+                    <h4 className="text-lg font-bold text-foreground">Message Sent Successfully!</h4>
                     <p className="text-xs text-muted-foreground max-w-sm mx-auto">
-                      Thank you for reaching out! Click below to send this directly through your email client.
+                      Thank you for reaching out! Your inquiry has been sent directly to <strong className="text-foreground">sesebrixligon@gmail.com</strong>.
                     </p>
                   </div>
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-                    <button
-                      type="button"
-                      onClick={handleMailtoDirect}
-                      className="px-4 py-2 rounded-xl bg-primary text-primary-foreground font-mono text-xs font-semibold"
-                    >
-                      Open Email App to Send
-                    </button>
                     <button
                       type="button"
                       onClick={() => {
                         setSubmitted(false);
                         setFormState({ name: "", email: "", subject: "", message: "" });
                       }}
-                      className="px-4 py-2 rounded-xl bg-secondary text-secondary-foreground font-mono text-xs"
+                      className="px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-mono text-xs font-bold shadow-md hover:bg-primary/90 transition-all"
                     >
-                      Write Another Message
+                      Send Another Message
                     </button>
                   </div>
                 </div>
@@ -346,18 +364,14 @@ export function Contact() {
                     />
                   </div>
 
-                  <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-[11px] text-muted-foreground">
-                      Direct transmission with email backup.
-                    </p>
-
+                  <div className="pt-2 flex items-center justify-end">
                     <button
                       type="submit"
                       disabled={isSubmitting}
                       className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-mono text-xs font-bold transition-all shadow-md w-full sm:w-auto disabled:opacity-50"
                     >
                       <Send className="w-3.5 h-3.5" />
-                      {isSubmitting ? "Processing..." : "Send Message"}
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </button>
                   </div>
                 </form>

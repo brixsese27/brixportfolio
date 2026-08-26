@@ -19,13 +19,13 @@ export function Experience() {
         <div className="max-w-2xl mb-12">
           <div className="section-label">
             <Terminal className="w-3.5 h-3.5 text-brand-500" />
-            05 // Experience &amp; Training
+            05 // Experience
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
-            Industry Internship &amp; Engineering Work
+            Internship Experience
           </h2>
           <p className="text-base text-muted-foreground mt-2">
-            Practical development background, on-the-job training (OJT), and team collaboration experience.
+            Practical on-the-job training (OJT) in hospital IT support, hardware maintenance, and systems deployment.
           </p>
         </div>
 

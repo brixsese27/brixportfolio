@@ -99,11 +99,8 @@ export function Navbar() {
           className="group flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1"
           aria-label={`${profileData.name} - Home`}
         >
-          <div className="w-9 h-9 rounded-lg bg-card border border-border group-hover:border-primary/50 flex items-center justify-center text-primary transition-all duration-200 shadow-sm">
-            <Terminal className="w-4 h-4 text-brand-500 transition-transform group-hover:scale-110" />
-          </div>
           <div className="flex flex-col">
-            <span className="font-mono text-sm font-bold tracking-tight text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+            <span className="font-mono text-base font-bold tracking-tight text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
               {profileData.name}
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
             </span>

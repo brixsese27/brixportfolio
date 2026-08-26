@@ -1,90 +1,82 @@
 import { CapstoneProject } from "@/types";
 
+export interface CapstoneTechItem {
+  name: string;
+  category: string;
+  iconType: string;
+}
+
+export const capstoneTechStack: CapstoneTechItem[] = [
+  { name: "JavaScript", category: "Programming", iconType: "js" },
+  { name: "PHPMailer", category: "Email Dispatch", iconType: "php" },
+  { name: "HTML5", category: "Frontend Markup", iconType: "html" },
+  { name: "CSS3", category: "Styling & Layout", iconType: "css" },
+  { name: "Hostinger", category: "Web & Domain Hosting", iconType: "hostinger" },
+  { name: "MySQL", category: "Relational Database", iconType: "mysql" },
+  { name: "Semaphore SMS", category: "SMS Gateway API", iconType: "sms" }
+];
+
 export const capstoneData: CapstoneProject = {
-  title: "e-Biga MIS for Barangay Biga, Tanza, Cavite",
-  codeName: "e-Biga Management Information System",
-  badge: "BSIT Academic Capstone — Flagship Digital System",
+  title: "e-Biga Management Information System",
+  codeName: "Barangay Biga, Tanza, Cavite",
+  badge: "BSIT Academic Capstone Project",
   tagline:
-    "A web-based Management Information System that digitizes resident records and streamlines barangay services, reporting, and document processing.",
+    "Web-based Management Information System for Barangay Biga that digitizes resident records and streamlines barangay services, reporting, and document processing.",
   overview:
-    "As the flagship capstone project for our BS Information Technology degree, e-Biga MIS was developed specifically for Barangay Biga, Tanza, Cavite. The system modernizes local government operations by replacing manual paper logbooks with a centralized, secure digital platform for resident census data, certificate generation, incident blotter tracking, and administrative reporting.",
+    "A web-based Management Information System (MIS) engineered for Barangay Biga, Tanza, Cavite. The platform modernizes local government operations by digitizing resident census records, automating barangay clearances and certificates, managing incident blotters, and delivering automated SMS notifications.",
   problem:
-    "Barangay staff faced significant delays using manual paper-based filing systems and spreadsheets—resulting in long queuing lines for residents requesting clearances, high risk of physical document damage, record duplication, and difficult end-of-month report consolidation.",
+    "Barangay staff previously handled resident records and document requests using manual handwritten logbooks and paper files, resulting in long waiting queues, misplaced documents, and time-consuming report preparation.",
   solution:
-    "Engineered a full-featured web-based Management Information System that centralizes resident profiles, automates instant one-click barangay certificate and clearance generation, tracks blotter records securely, and produces real-time demographic analytics for barangay officials.",
-  myRole:
-    "Lead Technical Developer & Systems Implementer: Led the system architecture and database design, developed administrative document generation workflows, integrated data validation mechanisms, and deployed the production system for community usage at ebigatanza.com.",
+    "Developed a centralized web MIS with instant certificate generation (Barangay Clearance, Certificate of Indigency, Residency), automated resident profiling, SMS notifications via Semaphore, and secure data storage on MySQL.",
+  myRole: "Full-Stack Developer & Technical Implementer",
   technologies: [
-    "Web Application",
-    "Database Management",
-    "Responsive UI",
-    "Document Automation",
-    "Security & RBAC",
-    "AI-Assisted Vibe Coding"
+    "JavaScript",
+    "PHPMailer",
+    "HTML",
+    "CSS",
+    "Hostinger",
+    "MySQL",
+    "Semaphore SMS"
   ],
   majorFeatures: [
     {
       title: "Resident Census & Household Records",
       description:
-        "Centralized database capturing family records, senior citizen classifications, voter statuses, and emergency contact details.",
+        "Centralized database capturing resident profiles, household classifications, and family records.",
       iconName: "FileCheck"
     },
     {
       title: "Automated Certificate Issuance",
       description:
-        "One-click generation and printing of Barangay Clearance, Certificate of Indigency, Certificate of Residency, and Business Clearances.",
+        "Instant generation and printing of Barangay Clearance, Indigency, and Residency certificates.",
       iconName: "FileText"
     },
     {
-      title: "Digital Blotter & Incident Management",
+      title: "Digital Blotter & Incident Tracking",
       description:
-        "Confidential logging of community complaints, mediation hearing schedules, incident resolutions, and case status tracking.",
+        "Confidential logging of community complaints, hearing schedules, and incident resolutions.",
       iconName: "ShieldAlert"
     },
     {
-      title: "Demographic Analytics & Reporting",
+      title: "SMS Notifications via Semaphore",
       description:
-        "Automated consolidation of monthly barangay summaries, population counts, sector reports, and printable official documents.",
-      iconName: "BarChart3"
+        "Automated text messaging to residents regarding document readiness and barangay announcements.",
+      iconName: "Send"
     }
   ],
   systemHighlights: [
     {
       title: "Fast Document Turnaround",
-      description: "Reduced resident waiting time for official certificates from 30+ minutes of manual handwriting to under 2 minutes."
+      description: "Reduced resident waiting time for official certificates to under 2 minutes."
     },
     {
-      title: "Data Integrity & Verification",
-      description: "Structured relational tables eliminate duplicate resident records and ensure accurate household demographics."
-    },
-    {
-      title: "Role-Based Access Control",
-      description: "Protected administrative access separating Barangay Captain, Secretary, Health Workers, and Triage Clerks."
-    },
-    {
-      title: "Live Production Deployment",
-      description: "Deployed to live domain at https://ebigatanza.com for direct community and office utilization."
+      title: "Live Production Domain",
+      description: "Deployed to live domain at https://ebigatanza.com/homepage for community usage."
     }
   ],
-  challenges: [
-    {
-      challenge: "Transitioning legacy handwritten paper records with inconsistent data formats into structured digital tables.",
-      resolution:
-        "Created standardized input validation schemas and bulk verification workflows to ensure accurate record migration."
-    },
-    {
-      challenge: "Ensuring non-technical barangay office staff could navigate and operate the system efficiently.",
-      resolution:
-        "Designed a clean, accessible user interface with intuitive action buttons, clear visual feedback, and quick-print shortcuts."
-    }
-  ],
-  contributions: [
-    "Architected the relational database schema to model residents, households, certificates, and blotter incidents.",
-    "Built dynamic certificate formatting modules that output printable, formatted official barangay documents.",
-    "Implemented role-scoped security protections ensuring sensitive resident records remain confidential.",
-    "Conducted end-user training sessions for Barangay Biga administrative staff to ensure smooth system adoption."
-  ],
+  challenges: [],
+  contributions: [],
   githubUrl: "https://github.com/brixsese27/brixportfolio",
-  liveUrl: "https://ebigatanza.com",
+  liveUrl: "https://ebigatanza.com/homepage",
   image: "/projects/ebiga-mis.svg"
 };

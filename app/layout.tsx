@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   authors: [{ name: profileData.name, url: "https://brixsese.dev" }],
   creator: profileData.name,
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/2x2.jpg",
+    shortcut: "/2x2.jpg",
+    apple: "/2x2.jpg",
   },
   openGraph: {
     type: "website",

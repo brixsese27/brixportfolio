@@ -107,35 +107,36 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "vibe-coding",
-    title: "Vibe Coding & Digital Solutions",
-    description: "AI-assisted programming and web application development tools.",
+    title: "Vibe Coding & AI Tools",
+    description: "AI-assisted programming tools used to generate, debug, and build digital solutions.",
     skills: [
       {
-        name: "Vibe Coding / AI Agents",
+        name: "Cursor AI",
         level: "Proficient",
-        description: "Using Gemini, ChatGPT, and Claude Code to generate, understand, debug, and improve code for digital solutions.",
+        description: "AI-native code editor used for prompt-driven development, inline code edits, and smart refactoring.",
         iconName: "Sparkles",
         highlight: true
       },
       {
-        name: "Web Technologies (Next.js/React)",
+        name: "Claude Code",
         level: "Proficient",
-        description: "Building responsive web pages, form handling, and user interfaces with HTML5, CSS3, TypeScript, and Next.js.",
+        description: "Terminal-based agentic coding tool used for rapid bug fixing, codebase exploration, and feature building.",
+        iconName: "Terminal",
+        highlight: true
+      },
+      {
+        name: "Codex",
+        level: "Proficient",
+        description: "AI coding model assisting in syntax completion, script generation, and logic implementation.",
         iconName: "Code2",
         highlight: true
       },
       {
-        name: "Git & GitHub",
+        name: "Devin AI",
         level: "Proficient",
-        description: "Version control, repository management, committing code, and collaborating on digital projects.",
-        iconName: "GitBranch",
+        description: "Autonomous software assistant used for end-to-end development tasks and issue resolution.",
+        iconName: "Cpu",
         highlight: true
-      },
-      {
-        name: "VS Code",
-        level: "Proficient",
-        description: "Workspace configuration, extensions management, terminal usage, and code debugging.",
-        iconName: "Terminal"
       }
     ]
   }

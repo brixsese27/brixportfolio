@@ -61,12 +61,6 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {profileData.name}. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-4 text-muted-foreground">
-            <span>Built with Next.js &amp; Tailwind CSS</span>
-            <span>•</span>
-            <span className="text-brand-600 dark:text-brand-400 font-semibold">Vercel Ready</span>
-          </div>
-
           {/* Social Links */}
           <div className="flex items-center gap-3">
             <a
