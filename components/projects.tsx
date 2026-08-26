@@ -13,46 +13,55 @@ import {
   Sparkles,
   Smartphone,
   Tag,
-  Grid
+  Grid,
+  Database,
+  Github,
+  Mail
 } from "lucide-react";
 
 // Tech stack icon helper matching Capstone design
 function renderProjectTechIcon(type: string) {
   switch (type) {
-    case "next":
+    case "php":
       return (
-        <span className="w-7 h-7 rounded-lg bg-zinc-950 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm border border-zinc-800">
-          N
+        <span className="w-7 h-7 rounded-lg bg-indigo-600 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
+          PHP
         </span>
       );
-    case "react":
+    case "html":
       return (
-        <span className="w-7 h-7 rounded-lg bg-cyan-600 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
-          ⚛
+        <span className="w-7 h-7 rounded-lg bg-orange-500 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
+          {"<5>"}
         </span>
       );
-    case "ts":
+    case "css":
       return (
-        <span className="w-7 h-7 rounded-lg bg-blue-600 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
-          TS
+        <span className="w-7 h-7 rounded-lg bg-blue-500 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
+          #3
         </span>
       );
-    case "tailwind":
+    case "js":
       return (
-        <span className="w-7 h-7 rounded-lg bg-sky-500 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
-          🌊
+        <span className="w-7 h-7 rounded-lg bg-amber-400 text-zinc-950 font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
+          JS
         </span>
       );
-    case "ai":
+    case "mysql":
       return (
-        <span className="w-7 h-7 rounded-lg bg-amber-500 text-zinc-950 font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
-          <Sparkles className="w-4 h-4" />
+        <span className="w-7 h-7 rounded-lg bg-sky-600 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
+          <Database className="w-4 h-4" />
         </span>
       );
     case "vercel":
       return (
         <span className="w-7 h-7 rounded-lg bg-zinc-900 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
           ▲
+        </span>
+      );
+    case "github":
+      return (
+        <span className="w-7 h-7 rounded-lg bg-zinc-800 text-white font-mono font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">
+          <Github className="w-4 h-4" />
         </span>
       );
     default:
@@ -190,7 +199,7 @@ export function Projects() {
               </span>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {staticCultureTechStack.map((tech) => (
                 <div
                   key={tech.name}

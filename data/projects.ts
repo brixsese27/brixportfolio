@@ -7,12 +7,13 @@ export interface ProjectTechItem {
 }
 
 export const staticCultureTechStack: ProjectTechItem[] = [
-  { name: "Next.js", category: "React Framework", iconType: "next" },
-  { name: "React", category: "UI Library", iconType: "react" },
-  { name: "TypeScript", category: "Type-Safe Code", iconType: "ts" },
-  { name: "Tailwind CSS", category: "Utility-First Styling", iconType: "tailwind" },
-  { name: "Vibe Coding", category: "AI Assisted Tools", iconType: "ai" },
-  { name: "Vercel", category: "Edge Cloud Hosting", iconType: "vercel" }
+  { name: "PHP", category: "Backend Logic", iconType: "php" },
+  { name: "HTML5", category: "Frontend Markup", iconType: "html" },
+  { name: "CSS3", category: "Styling & Design", iconType: "css" },
+  { name: "JavaScript", category: "Client-Side Scripting", iconType: "js" },
+  { name: "MySQL", category: "Relational Database", iconType: "mysql" },
+  { name: "Vercel", category: "Cloud Hosting", iconType: "vercel" },
+  { name: "GitHub", category: "Version Control", iconType: "github" }
 ];
 
 export const staticCultureProject: Project = {
@@ -26,27 +27,28 @@ export const staticCultureProject: Project = {
   problem:
     "Apparel and lifestyle brands need a clean, responsive showcase that loads instantly on mobile devices, showcasing garments and lookbooks without heavy e-commerce plugin bloat.",
   solution:
-    "Built a high-performance web storefront utilizing Next.js, TypeScript, and Tailwind CSS with smooth responsive navigation, instant product categorization, and edge deployment on Vercel.",
+    "Built a lightweight, responsive storefront utilizing PHP, HTML, CSS, JavaScript, and MySQL with smooth navigation, structured product catalog data, and version control via GitHub.",
   myRole: "Frontend Developer & UI Implementer",
   technologies: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Vibe Coding",
-    "Vercel"
+    "PHP",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "MySQL",
+    "Vercel",
+    "GitHub"
   ],
   features: [
     "Responsive Apparel & Collection Showcase",
     "Interactive Catalog & Category Filtering",
     "Detailed Product Pricing & Sizing Information",
     "Mobile-First Navigation & Touch Interface",
-    "Optimized Asset Delivery with Zero Layout Shift"
+    "Structured Database & Asset Delivery"
   ],
   highlights: [
-    "Developed with modern AI-assisted Vibe Coding workflows",
+    "Developed with clean, responsive PHP, HTML, and CSS",
     "100% responsive design across smartphone, tablet, and desktop",
-    "Production-deployed on Vercel"
+    "Repository and version management via GitHub"
   ],
   challenges: [],
   githubUrl: "https://github.com/brixsese27/brixportfolio",
