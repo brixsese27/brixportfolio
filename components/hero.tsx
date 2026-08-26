@@ -320,7 +320,7 @@ export function Hero() {
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
                         Degree Program Status
                       </span>
-                      <span className="text-brand-600 dark:text-brand-400 font-bold">CavSU BSIT Graduate</span>
+                      <span className="text-brand-600 dark:text-brand-400 font-bold">CvSU BSIT Graduate 2022- 2026</span>
                     </div>
                   </div>
 
