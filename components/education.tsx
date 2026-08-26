@@ -24,9 +24,6 @@ export function Education() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
             Formal Education &amp; Foundations
           </h2>
-          <p className="text-base text-muted-foreground mt-2">
-            Academic degree, software engineering coursework, and computer systems training.
-          </p>
         </div>
 
         {/* Education Showcase Cards */}
