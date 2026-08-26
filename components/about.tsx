@@ -1,6 +1,9 @@
+"use client";
+
 import * as React from "react";
 import Image from "next/image";
 import { profileData } from "@/data/profile";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import {
   GraduationCap,
   MapPin,
@@ -21,57 +24,68 @@ export function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-12">
-          <div className="section-label">
-            <Terminal className="w-3.5 h-3.5 text-brand-500" />
-            01 // About Me
+        <ScrollReveal direction="up">
+          <div className="max-w-2xl mb-12">
+            <div className="section-label">
+              <Terminal className="w-3.5 h-3.5 text-brand-500" />
+              01 // About Me
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
+              Committed to reliable IT support &amp; technical service.
+            </h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
-            Committed to reliable IT support &amp; technical service.
-          </h2>
-        </div>
+        </ScrollReveal>
 
         {/* Two-Column Editorial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
           {/* Left Column: Narrative & Principles */}
-          <div className="lg:col-span-7 space-y-6">
+          <ScrollReveal direction="up" delay={100} className="lg:col-span-7 space-y-6">
             <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
               {profileData.bioParagraphs.map((paragraph, idx) => (
-                <p key={idx} className="text-foreground/85">
+                <p key={idx} className="text-foreground/80">
                   {paragraph}
                 </p>
               ))}
             </div>
 
-            {/* Core Working Principles */}
-            <div className="pt-6 space-y-4">
-              <h3 className="text-sm font-mono uppercase tracking-wider text-brand-600 dark:text-brand-400 font-semibold flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-brand-500" />
-                Work Philosophy &amp; Principles
-              </h3>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {profileData.principles.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-xl bg-card border border-border hover:border-primary/40 transition-colors shadow-sm"
-                  >
-                    <div className="font-mono text-xs font-bold text-foreground mb-1 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-500" />
-                      {item.title}
-                    </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
+            {/* Guiding Principles Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              {profileData.principles.map((principle, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 rounded-xl border border-border bg-card/60 hover:bg-card hover:border-primary/40 transition-all duration-200 shadow-sm"
+                >
+                  <div className="w-2 h-2 rounded-full bg-brand-500 mb-2.5" />
+                  <div className="font-mono text-xs font-bold text-foreground mb-1">
+                    {principle.title}
                   </div>
-                ))}
+                  <div className="text-xs text-muted-foreground leading-relaxed">
+                    {principle.description}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Location and Education Badge Row */}
+            <div className="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono text-muted-foreground">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-muted/60 border border-border">
+                <MapPin className="w-3.5 h-3.5 text-brand-500" />
+                <span>{profileData.location}</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-muted/60 border border-border">
+                <Building className="w-3.5 h-3.5 text-cyan-500" />
+                <span>Gentri Doctors Hospital OJT</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-muted/60 border border-border">
+                <GraduationCap className="w-3.5 h-3.5 text-indigo-500" />
+                <span>Cavite State University</span>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Developer Profile Specification Card */}
-          <div className="lg:col-span-5 w-full">
+          <ScrollReveal direction="up" delay={200} className="lg:col-span-5 w-full">
             <div className="rounded-2xl border border-border bg-card shadow-lg p-6 sm:p-7 space-y-6 relative overflow-hidden">
               
               {/* Subtle accent bar at top */}
@@ -111,38 +125,47 @@ export function About() {
                     <GraduationCap className="w-4 h-4 text-brand-500" />
                   </div>
                   <div>
-                    <div className="text-muted-foreground text-[11px] uppercase">Education</div>
-                    <div className="text-foreground font-semibold text-xs leading-snug">
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                      Academic Degree
+                    </div>
+                    <div className="font-semibold text-foreground">
                       {profileData.degree}
                     </div>
-                    <div className="text-muted-foreground text-[11px]">
+                    <div className="text-[11px] text-muted-foreground">
                       Cavite State University - Trece Martires
                     </div>
                   </div>
                 </div>
 
-                {/* Focus */}
+                {/* Practical OJT */}
                 <div className="flex items-start gap-3">
                   <div className="p-2 rounded-lg bg-muted text-muted-foreground mt-0.5">
-                    <Wrench className="w-4 h-4 text-cyan-500" />
+                    <Building className="w-4 h-4 text-cyan-500" />
                   </div>
                   <div>
-                    <div className="text-muted-foreground text-[11px] uppercase">Core Specialization</div>
-                    <div className="text-foreground font-semibold text-xs leading-snug">
-                      {profileData.field}
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                      Internship Experience
+                    </div>
+                    <div className="font-semibold text-foreground">
+                      Gentri Doctors (Hospital IT Dept)
+                    </div>
+                    <div className="text-[11px] text-muted-foreground">
+                      486 Hours Technical Support
                     </div>
                   </div>
                 </div>
 
-                {/* Internship */}
+                {/* Core Field Focus */}
                 <div className="flex items-start gap-3">
                   <div className="p-2 rounded-lg bg-muted text-muted-foreground mt-0.5">
-                    <Building className="w-4 h-4 text-indigo-500" />
+                    <Wrench className="w-4 h-4 text-indigo-500" />
                   </div>
                   <div>
-                    <div className="text-muted-foreground text-[11px] uppercase">Hospital Internship (486 hrs)</div>
-                    <div className="text-foreground font-semibold text-xs leading-snug">
-                      Gentri Doctors (Hospital IT Dept)
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                      Primary Focus
+                    </div>
+                    <div className="font-semibold text-foreground">
+                      {profileData.field}
                     </div>
                   </div>
                 </div>
@@ -153,25 +176,31 @@ export function About() {
                     <MapPin className="w-4 h-4 text-rose-500" />
                   </div>
                   <div>
-                    <div className="text-muted-foreground text-[11px] uppercase">Location</div>
-                    <div className="text-foreground font-semibold text-xs leading-snug">
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">
+                      Location
+                    </div>
+                    <div className="font-semibold text-foreground">
                       {profileData.location}
                     </div>
                   </div>
                 </div>
 
-                {/* Professional Status */}
-                <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-muted text-muted-foreground mt-0.5">
-                    <Briefcase className="w-4 h-4 text-amber-500" />
-                  </div>
-                  <div>
-                    <div className="text-muted-foreground text-[11px] uppercase">Availability</div>
-                    <div className="text-brand-600 dark:text-brand-400 font-semibold text-xs leading-snug flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
-                      {profileData.status}
-                    </div>
-                  </div>
+                {/* Direct Contact Row */}
+                <div className="grid grid-cols-2 gap-2 pt-2">
+                  <a
+                    href={`mailto:${profileData.email}`}
+                    className="p-2 rounded-lg bg-muted/60 hover:bg-muted border border-border flex items-center gap-2 text-foreground transition-colors"
+                  >
+                    <Mail className="w-3.5 h-3.5 text-brand-500" />
+                    <span className="truncate text-[11px]">Email Me</span>
+                  </a>
+                  <a
+                    href={`tel:${profileData.phone}`}
+                    className="p-2 rounded-lg bg-muted/60 hover:bg-muted border border-border flex items-center gap-2 text-foreground transition-colors"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-cyan-500" />
+                    <span className="truncate text-[11px]">Call Phone</span>
+                  </a>
                 </div>
 
               </div>
@@ -194,7 +223,7 @@ export function About() {
               </div>
 
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

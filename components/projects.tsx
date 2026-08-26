@@ -3,6 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { staticCultureProject, staticCultureTechStack } from "@/data/projects";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import {
   Terminal,
   ShoppingBag,
@@ -102,21 +103,24 @@ export function Projects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Label & Clean Header */}
-        <div className="max-w-3xl mb-10">
-          <div className="section-label">
-            <Terminal className="w-3.5 h-3.5 text-brand-500" />
-            03 // Featured Project
+        <ScrollReveal direction="up">
+          <div className="max-w-3xl mb-10">
+            <div className="section-label">
+              <Terminal className="w-3.5 h-3.5 text-brand-500" />
+              03 // Featured Project
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground font-sans">
+              Static Culture (e-Commerce Storefront)
+            </h2>
+            <p className="text-base text-muted-foreground mt-2 leading-relaxed">
+              A responsive digital storefront for a contemporary clothing and lifestyle brand showcasing collections, pricing, and product details.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground font-sans">
-            Static Culture (e-Commerce Storefront)
-          </h2>
-          <p className="text-base text-muted-foreground mt-2 leading-relaxed">
-            A responsive digital storefront for a contemporary clothing and lifestyle brand showcasing collections, pricing, and product details.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Project Showcase Container */}
-        <div className="rounded-3xl border border-border bg-card shadow-xl overflow-hidden relative space-y-8 p-6 sm:p-10">
+        <ScrollReveal direction="up" delay={150}>
+          <div className="rounded-3xl border border-border bg-card shadow-xl overflow-hidden relative space-y-8 p-6 sm:p-10">
           
           {/* Top Live Website Browser Window with High-Fidelity UI Mockup & Direct Link */}
           <div className="rounded-2xl border border-border bg-muted/40 overflow-hidden shadow-lg group">
@@ -237,6 +241,7 @@ export function Projects() {
           </div>
 
         </div>
+        </ScrollReveal>
 
       </div>
     </section>

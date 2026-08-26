@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { skillCategories } from "@/data/skills";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import {
   Code2,
   Palette,
@@ -64,57 +65,61 @@ export function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="max-w-2xl">
-            <div className="section-label">
-              <Terminal className="w-3.5 h-3.5 text-brand-500" />
-              02 // Technical Stack
+        <ScrollReveal direction="up">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="max-w-2xl">
+              <div className="section-label">
+                <Terminal className="w-3.5 h-3.5 text-brand-500" />
+                02 // Technical Stack
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
+                Technologies &amp; Developer Tools
+              </h2>
+              <p className="text-base text-muted-foreground mt-2">
+                Structured technical stack utilized in building full-stack web applications and academic systems.
+              </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
-              Technologies &amp; Developer Tools
-            </h2>
-            <p className="text-base text-muted-foreground mt-2">
-              Structured technical stack utilized in building full-stack web applications and academic systems.
-            </p>
-          </div>
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-card border border-border rounded-xl shadow-sm self-start">
-            <button
-              type="button"
-              onClick={() => setSelectedCategory("all")}
-              className={cn(
-                "px-3 py-1.5 rounded-lg text-xs font-mono transition-all",
-                selectedCategory === "all"
-                  ? "bg-primary text-primary-foreground font-semibold shadow-sm"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
-              )}
-            >
-              All
-            </button>
-            {skillCategories.map((cat) => (
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap items-center gap-1.5 p-1 bg-card border border-border rounded-xl shadow-sm self-start">
               <button
-                key={cat.id}
                 type="button"
-                onClick={() => setSelectedCategory(cat.id)}
+                onClick={() => setSelectedCategory("all")}
                 className={cn(
                   "px-3 py-1.5 rounded-lg text-xs font-mono transition-all",
-                  selectedCategory === cat.id
+                  selectedCategory === "all"
                     ? "bg-primary text-primary-foreground font-semibold shadow-sm"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 )}
               >
-                {cat.title.split(" ")[0]}
+                All
               </button>
-            ))}
+              {skillCategories.map((cat) => (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={cn(
+                    "px-3 py-1.5 rounded-lg text-xs font-mono transition-all",
+                    selectedCategory === cat.id
+                      ? "bg-primary text-primary-foreground font-semibold shadow-sm"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  )}
+                >
+                  {cat.title.split(" ")[0]}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Categorized Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredCategories.map((category) => (
-            <div
+          {filteredCategories.map((category, idx) => (
+            <ScrollReveal
               key={category.id}
+              direction="up"
+              delay={idx * 100}
               className="p-6 rounded-2xl bg-card border border-border hover:border-border/90 transition-all shadow-sm flex flex-col justify-between"
             >
               <div>
@@ -169,7 +174,7 @@ export function Skills() {
                   ))}
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

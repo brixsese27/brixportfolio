@@ -1,5 +1,8 @@
+"use client";
+
 import * as React from "react";
 import { educationData } from "@/data/education";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import {
   GraduationCap,
   Calendar,
@@ -16,21 +19,25 @@ export function Education() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-12">
-          <div className="section-label">
-            <Terminal className="w-3.5 h-3.5 text-brand-500" />
-            06 // Academic Background
+        <ScrollReveal direction="up">
+          <div className="max-w-2xl mb-12">
+            <div className="section-label">
+              <Terminal className="w-3.5 h-3.5 text-brand-500" />
+              06 // Academic Background
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
+              Formal Education &amp; Foundations
+            </h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-sans">
-            Formal Education &amp; Foundations
-          </h2>
-        </div>
+        </ScrollReveal>
 
         {/* Education Showcase Cards */}
         <div className="grid grid-cols-1 gap-8">
-          {educationData.map((item) => (
-            <div
+          {educationData.map((item, idx) => (
+            <ScrollReveal
               key={item.id}
+              direction="up"
+              delay={idx * 150}
               className="p-6 sm:p-10 rounded-2xl bg-card border border-border hover:border-primary/40 transition-all shadow-sm space-y-8 relative overflow-hidden"
             >
               <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 border-b border-border">
@@ -48,36 +55,36 @@ export function Education() {
                     <div className="text-base font-semibold text-muted-foreground mt-1">
                       {item.institution}
                     </div>
-                    <div className="text-xs font-mono text-muted-foreground/80 mt-0.5">
+                    <div className="text-xs font-mono text-muted-foreground mt-0.5">
                       {item.major}
                     </div>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap lg:flex-col lg:items-end gap-2 text-xs font-mono text-muted-foreground">
-                  <span className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-muted text-foreground font-semibold">
+                <div className="flex flex-col lg:items-end gap-1.5 text-xs font-mono text-muted-foreground">
+                  <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-muted">
                     <Calendar className="w-3.5 h-3.5 text-brand-500" />
                     {item.period}
                   </span>
-                  <span className="flex items-center gap-1.5 px-2 py-0.5">
-                    <MapPin className="w-3.5 h-3.5 text-muted-foreground" />
+                  <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-muted">
+                    <MapPin className="w-3.5 h-3.5 text-cyan-500" />
                     {item.location}
                   </span>
                 </div>
               </div>
 
-              {/* Highlights & Distinctions Grid */}
+              {/* Two Column details: Distinctions & Highlights vs Coursework */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
-                {/* Left: Highlights & Honors */}
-                <div className="lg:col-span-5 space-y-4">
+                {/* Left: Distinctions & Program Highlights */}
+                <div className="lg:col-span-5 space-y-6">
                   {item.distinctions && item.distinctions.length > 0 && (
-                    <div className="p-4 rounded-xl bg-amber-500/5 dark:bg-amber-500/10 border border-amber-500/20 space-y-2">
-                      <div className="text-xs font-mono font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 flex items-center gap-2">
+                    <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 space-y-2">
+                      <div className="text-xs font-mono font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-2">
                         <Award className="w-4 h-4" />
                         Academic Distinctions
                       </div>
-                      <ul className="space-y-1.5 text-xs text-foreground/90 font-mono">
+                      <ul className="space-y-1 text-xs font-mono text-foreground/90">
                         {item.distinctions.map((dist, dIdx) => (
                           <li key={dIdx} className="flex items-center gap-2">
                             <span className="text-amber-500">★</span>
@@ -88,15 +95,15 @@ export function Education() {
                     </div>
                   )}
 
-                  <div className="space-y-2">
-                    <div className="text-xs font-mono font-bold uppercase tracking-wider text-foreground">
+                  <div className="space-y-2.5">
+                    <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider font-semibold">
                       Program Highlights:
                     </div>
                     <div className="space-y-2">
                       {item.highlights.map((hl, hIdx) => (
-                        <div key={hIdx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
-                          <CheckCircle2 className="w-4 h-4 text-brand-500 shrink-0 mt-0.5" />
-                          <span>{hl}</span>
+                        <div key={hIdx} className="text-xs text-foreground/90 flex items-start gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{hl}</span>
                         </div>
                       ))}
                     </div>
@@ -124,7 +131,7 @@ export function Education() {
 
               </div>
 
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

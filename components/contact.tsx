@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { profileData } from "@/data/profile";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import {
   Mail,
   Phone,
@@ -100,23 +101,25 @@ export function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-14">
-          <div className="section-label">
-            <Terminal className="w-3.5 h-3.5 text-brand-500" />
-            07 // Get in Touch
+        <ScrollReveal direction="up">
+          <div className="max-w-3xl mb-14">
+            <div className="section-label">
+              <Terminal className="w-3.5 h-3.5 text-brand-500" />
+              07 // Get in Touch
+            </div>
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground font-sans">
+              Let&apos;s build something meaningful.
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground mt-4 leading-relaxed">
+              I am currently open to full-time **IT Support Specialist**, **Helpdesk Technician**, **Technical Support**, and IT maintenance roles. Feel free to connect via phone, email, or LinkedIn.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground font-sans">
-            Let&apos;s build something meaningful.
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mt-4 leading-relaxed">
-            I am currently open to full-time **IT Support Specialist**, **Helpdesk Technician**, **Technical Support**, and IT maintenance roles. Feel free to connect via phone, email, or LinkedIn.
-          </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           
           {/* Left Column: Direct Contact Details & Interactive Copy Widgets */}
-          <div className="lg:col-span-5 space-y-6">
+          <ScrollReveal direction="up" delay={100} className="lg:col-span-5 space-y-6">
             
             {/* Quick Email & Phone Contact Card */}
             <div className="p-6 sm:p-7 rounded-2xl bg-card border border-border shadow-md space-y-5">
@@ -273,10 +276,10 @@ export function Contact() {
               </a>
             </div>
 
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Static Contact Message Form */}
-          <div className="lg:col-span-7">
+          <ScrollReveal direction="up" delay={200} className="lg:col-span-7">
             <div className="p-6 sm:p-8 rounded-2xl bg-card border border-border shadow-lg space-y-6">
               
               <div className="flex items-center justify-between border-b border-border pb-4">
@@ -392,7 +395,7 @@ export function Contact() {
               )}
 
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
 
