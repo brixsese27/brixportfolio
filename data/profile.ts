@@ -6,8 +6,8 @@ export const profileData: Profile = {
   field: "IT Support & Technical Systems Maintenance",
   headline: "Providing reliable IT support, hardware maintenance, and practical digital solutions.",
   subheadline:
-    "BSIT graduate from Cavite State University with 486+ hours of hospital IT department internship experience in hardware troubleshooting, OS deployment, BizBox HIS, and network maintenance.",
-  status: "BSIT Graduate / Open to IT Support Roles",
+    "BSIT graduate from Cavite State University with 486+ hours of hospital IT department internship experience in hardware troubleshooting, OS deployment, and network maintenance.",
+  status: "Looking for Opportunities • IT Support Engineer or Related",
   location: "Trece Martires City, Cavite, Philippines",
   email: "sesebrixligon@gmail.com",
   phone: "+639854026038",

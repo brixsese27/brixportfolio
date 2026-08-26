@@ -48,14 +48,14 @@ export function Hero() {
           <div className="lg:col-span-7 flex flex-col items-start space-y-6">
             
             {/* Status Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-border bg-card/80 backdrop-blur-sm text-xs font-mono text-muted-foreground shadow-sm">
+            <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full border border-border bg-card/80 backdrop-blur-sm text-xs font-mono text-muted-foreground shadow-sm">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
               </span>
-              <span className="text-foreground font-semibold">Available for Opportunities</span>
+              <span className="text-foreground font-semibold">Looking for Opportunities</span>
               <span className="text-muted-foreground/60">•</span>
-              <span className="text-brand-600 dark:text-brand-400 font-medium">IT Support Specialist / Helpdesk</span>
+              <span className="text-brand-600 dark:text-brand-400 font-medium">IT Support Engineer or Related</span>
             </div>
 
             {/* Main Label & Large Typography */}
@@ -157,10 +157,10 @@ export function Hero() {
                 </div>
                 <div className="text-[11px] font-mono text-muted-foreground flex items-center gap-1.5">
                   <Laptop className="w-3.5 h-3.5 text-brand-500" />
-                  <span>it-technician-spec.ts</span>
+                  <span>brixspecs.ts</span>
                 </div>
                 <div className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-500/10 text-brand-600 dark:text-brand-400 font-semibold border border-brand-500/20">
-                  CavSU BSIT
+                  BSIT
                 </div>
               </div>
 
@@ -210,10 +210,10 @@ export function Hero() {
               {/* Tab Content 1: TypeScript Profile Contract */}
               {activeTab === "spec" && (
                 <div className="p-4 sm:p-5 font-mono text-xs text-foreground/90 space-y-1.5 leading-relaxed overflow-x-auto">
-                  <div className="text-muted-foreground">{"// IT Support Technician Specification"}</div>
+                  <div className="text-muted-foreground">{"// Brix Specification"}</div>
                   <div>
                     <span className="text-indigo-500 dark:text-indigo-400 font-bold">interface</span>{" "}
-                    <span className="text-cyan-600 dark:text-cyan-400 font-semibold">ITSupportSpecialist</span> {"{"}
+                    <span className="text-cyan-600 dark:text-cyan-400 font-semibold">ITSupport</span> {"{"}
                   </div>
                   <div className="pl-4">
                     <span className="text-muted-foreground">name:</span>{" "}
