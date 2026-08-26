@@ -251,7 +251,7 @@ export function Contact() {
                     <FileDown className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-mono font-bold text-foreground">Curriculum Vitae / Resume</div>
+                    <div className="text-xs font-mono font-bold text-foreground">View Resume</div>
                     <div className="text-[11px] text-muted-foreground font-mono">Official PDF Document</div>
                   </div>
                 </div>
