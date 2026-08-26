@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041f27" />
+      <stop offset="100%" stop-color="#020d11" />
+    </linearGradient>
+    <linearGradient id="medGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#bgGrad3)" />
+  <rect width="800" height="500" rx="16" fill="none" stroke="#164e63" stroke-width="1.5" />
+
+  <!-- Top App Window Bar -->
+  <rect width="800" height="42" fill="#031a20" />
+  <line x1="0" y1="42" x2="800" y2="42" stroke="#164e63" stroke-width="1" />
+  <circle cx="24" cy="21" r="5" fill="#ef4444" />
+  <circle cx="40" cy="21" r="5" fill="#f59e0b" />
+  <circle cx="56" cy="21" r="5" fill="#10b981" />
+  <text x="80" y="25" fill="#38bdf8" font-family="monospace" font-size="12">medicare-ehr.portal / patient-records / consultation</text>
+
+  <!-- Left: Patient Queue & Profile -->
+  <rect x="24" y="60" width="280" height="416" rx="10" fill="#082f38" stroke="#164e63" stroke-width="1" />
+  <text x="44" y="90" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold">ACTIVE PATIENT RECORD</text>
+
+  <circle cx="64" cy="130" r="22" fill="#0284c7" />
+  <text x="64" y="136" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">JD</text>
+  <text x="96" y="126" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold">Jonathan Drake</text>
+  <text x="96" y="142" fill="#94a3b8" font-family="sans-serif" font-size="11">Age 34 • Male • ID: #MED-8492</text>
+
+  <line x1="44" y1="168" x2="284" y2="168" stroke="#164e63" stroke-width="1" />
+
+  <!-- Vitals Grid -->
+  <text x="44" y="190" fill="#67e8f9" font-family="monospace" font-size="10" font-weight="600">TRIAGE VITALS</text>
+  
+  <rect x="44" y="202" width="112" height="48" rx="6" fill="#042028" />
+  <text x="56" y="218" fill="#64748b" font-family="sans-serif" font-size="10">Blood Pressure</text>
+  <text x="56" y="238" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold">120/80 mmHg</text>
+
+  <rect x="168" y="202" width="116" height="48" rx="6" fill="#042028" />
+  <text x="180" y="218" fill="#64748b" font-family="sans-serif" font-size="10">Heart Rate</text>
+  <text x="180" y="238" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="bold">72 bpm</text>
+
+  <text x="44" y="276" fill="#67e8f9" font-family="monospace" font-size="10" font-weight="600">TODAY'S APPOINTMENT QUEUE</text>
+  
+  <rect x="44" y="288" width="240" height="40" rx="6" fill="#0284c7" fill-opacity="0.2" stroke="#0ea5e9" stroke-width="1" />
+  <text x="56" y="306" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="600">09:00 AM • Jonathan Drake</text>
+  <text x="56" y="320" fill="#38bdf8" font-family="sans-serif" font-size="10">In Consultation • Dr. S. Alvarez</text>
+
+  <rect x="44" y="336" width="240" height="40" rx="6" fill="#042028" />
+  <text x="56" y="354" fill="#94a3b8" font-family="sans-serif" font-size="12">09:30 AM • Sarah Collins</text>
+  <text x="56" y="368" fill="#64748b" font-family="sans-serif" font-size="10">Waiting in Lobby • Regular Checkup</text>
+
+  <rect x="44" y="384" width="240" height="40" rx="6" fill="#042028" />
+  <text x="56" y="402" fill="#94a3b8" font-family="sans-serif" font-size="12">10:00 AM • David Miller</text>
+  <text x="56" y="416" fill="#64748b" font-family="sans-serif" font-size="10">Confirmed • Lab Test Review</text>
+
+  <!-- Right: Doctor's Consultation Workspace -->
+  <rect x="320" y="60" width="456" height="416" rx="10" fill="#082f38" stroke="#164e63" stroke-width="1" />
+  <text x="344" y="90" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold">CLINICAL CONSULTATION NOTES & DIAGNOSIS</text>
+
+  <!-- Consultation Notes Area -->
+  <rect x="344" y="106" width="408" height="150" rx="8" fill="#042028" stroke="#164e63" stroke-width="1" />
+  <text x="360" y="130" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Chief Complaint & Subjective Notes:</text>
+  <text x="360" y="152" fill="#94a3b8" font-family="sans-serif" font-size="12">Patient presents with mild respiratory congestion for 4 days.</text>
+  <text x="360" y="172" fill="#94a3b8" font-family="sans-serif" font-size="12">No high fever recorded. Clear breath sounds bilaterally.</text>
+  <text x="360" y="200" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="bold">Assessment: Acute Upper Respiratory Tract Infection (Mild)</text>
+  <text x="360" y="222" fill="#64748b" font-family="monospace" font-size="11">ICD-10 Code: J06.9 • Plan: Symptomatic relief & hydration</text>
+
+  <!-- Digital Prescription Module -->
+  <text x="344" y="280" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold">DIGITAL PRESCRIPTION GENERATOR</text>
+  <rect x="344" y="294" width="408" height="110" rx="8" fill="#042028" stroke="#164e63" stroke-width="1" />
+  
+  <text x="360" y="322" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="bold">Rx 1: Amoxicillin 500mg Capsule</text>
+  <text x="360" y="338" fill="#94a3b8" font-family="sans-serif" font-size="11">Take 1 capsule every 8 hours for 7 days after meals. Qty: 21 caps</text>
+
+  <line x1="360" y1="352" x2="736" y2="352" stroke="#164e63" stroke-width="1" />
+  
+  <text x="360" y="372" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="bold">Rx 2: Cetirizine 10mg Tablet</text>
+  <text x="360" y="388" fill="#94a3b8" font-family="sans-serif" font-size="11">Take 1 tablet at bedtime as needed for congestion. Qty: 10 tabs</text>
+
+  <!-- Action Buttons -->
+  <rect x="344" y="420" width="190" height="38" rx="6" fill="#0284c7" />
+  <text x="439" y="444" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Save & Issue Prescription</text>
+
+  <rect x="548" y="420" width="204" height="38" rx="6" fill="#042028" stroke="#0ea5e9" stroke-width="1" />
+  <text x="650" y="444" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Generate Medical Certificate</text>
+</svg>
