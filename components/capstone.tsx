@@ -74,8 +74,6 @@ function renderTechIcon(type: string) {
 }
 
 export function Capstone() {
-  const [iframeError, setIframeError] = React.useState(false);
-
   return (
     <section id="capstone" className="py-20 lg:py-28 border-t border-border/60 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,8 +95,8 @@ export function Capstone() {
         {/* Capstone Showcase Container */}
         <div className="rounded-3xl border border-border bg-card shadow-xl overflow-hidden relative space-y-8 p-6 sm:p-10">
           
-          {/* Top Live Website Browser Window with Live Iframe & Direct Link */}
-          <div className="rounded-2xl border border-border bg-muted/40 overflow-hidden shadow-lg">
+          {/* Top Live Website Browser Window with High-Fidelity UI Mockup & Direct Link */}
+          <div className="rounded-2xl border border-border bg-muted/40 overflow-hidden shadow-lg group">
             
             {/* Window Top Bar */}
             <div className="flex items-center justify-between px-4 py-3 bg-muted/90 border-b border-border text-xs font-mono">
@@ -113,41 +111,46 @@ export function Capstone() {
                 href="https://ebigatanza.com/homepage"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-1.5 rounded-lg bg-background border border-border text-foreground hover:text-primary transition-colors text-xs font-mono max-w-md truncate shadow-sm group"
+                className="flex items-center gap-2 px-4 py-1.5 rounded-lg bg-background border border-border text-foreground hover:text-primary transition-colors text-xs font-mono max-w-md truncate shadow-sm"
                 title="Open live website in new tab"
               >
                 <Globe className="w-3.5 h-3.5 text-brand-500" />
                 <span className="truncate">https://ebigatanza.com/homepage</span>
-                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0 ml-1" />
+                <ExternalLink className="w-3.5 h-3.5 text-muted-foreground shrink-0 ml-1" />
               </a>
 
-              <div className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-[11px]">
+              <a
+                href="https://ebigatanza.com/homepage"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-[11px] transition-colors"
+              >
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Live Website
-              </div>
+                Visit Live Site ↗
+              </a>
             </div>
 
-            {/* Live Interactive Embed / Viewport Container */}
-            <div className="relative w-full h-[360px] sm:h-[480px] lg:h-[580px] bg-background">
-              <iframe
-                src="https://ebigatanza.com/homepage"
-                title="e-Biga MIS Live Website"
-                className="w-full h-full border-none"
-                loading="lazy"
-                sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-                onError={() => setIframeError(true)}
+            {/* Visual Screenshot of System */}
+            <div className="relative w-full aspect-[16/10] sm:aspect-video rounded-b-2xl overflow-hidden bg-muted/20">
+              <Image
+                src={capstoneData.image}
+                alt="e-Biga Management Information System Live UI Preview"
+                fill
+                className="object-contain p-2 sm:p-4 transition-transform duration-300 group-hover:scale-[1.01]"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                priority
               />
-              
-              {/* Overlay quick open button in case iframe is blocked by X-Frame-Options */}
+
+              {/* Floating Quick Action Button */}
               <div className="absolute bottom-4 right-4 z-10">
                 <a
                   href="https://ebigatanza.com/homepage"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white font-mono text-xs font-bold transition-all shadow-xl hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-950 hover:bg-zinc-850 text-white font-mono text-xs font-bold transition-all shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-0.5 border border-zinc-800"
                 >
                   <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />
-                  Open Live Site in New Tab
+                  Open Live Website (ebigatanza.com)
                 </a>
               </div>
             </div>
