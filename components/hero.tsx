@@ -63,7 +63,7 @@ export function Hero() {
               <div className="text-xs sm:text-sm font-mono tracking-widest uppercase font-semibold text-brand-600 dark:text-brand-400">
                 BS INFORMATION TECHNOLOGY GRADUATE
               </div>
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground font-sans">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground font-sans">
                 {profileData.name}
               </h1>
             </div>

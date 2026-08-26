@@ -128,7 +128,7 @@ export function Capstone() {
             </div>
 
             {/* Live Interactive Embed / Viewport Container */}
-            <div className="relative w-full h-[460px] sm:h-[540px] lg:h-[600px] bg-background">
+            <div className="relative w-full h-[360px] sm:h-[480px] lg:h-[580px] bg-background">
               <iframe
                 src="https://ebigatanza.com/homepage"
                 title="e-Biga MIS Live Website"
