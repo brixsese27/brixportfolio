@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import { profileData } from "@/data/profile";
 import {
   GraduationCap,
@@ -76,16 +77,27 @@ export function About() {
               {/* Subtle accent bar at top */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-500 via-cyan-500 to-indigo-500" />
 
-              <div className="flex items-center justify-between border-b border-border pb-4">
-                <div>
-                  <div className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
-                    IT Candidate Profile
+              <div className="flex items-center justify-between border-b border-border pb-4 gap-3">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-14 h-14 rounded-xl border-2 border-primary/40 bg-muted overflow-hidden shrink-0 shadow-sm">
+                    <Image
+                      src="/2x2.jpg"
+                      alt="Brix Sese 2x2 Photo"
+                      width={56}
+                      height={56}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="text-xl font-bold text-foreground font-sans mt-0.5">
-                    {profileData.name}
+                  <div>
+                    <div className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
+                      IT Candidate Profile
+                    </div>
+                    <div className="text-lg font-bold text-foreground font-sans mt-0.5">
+                      {profileData.name}
+                    </div>
                   </div>
                 </div>
-                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-mono font-bold text-sm">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-mono font-bold text-sm shrink-0">
                   BSIT
                 </div>
               </div>

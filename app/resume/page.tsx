@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Printer,
   ArrowLeft,
@@ -84,13 +85,15 @@ export default function ResumePage() {
           </div>
 
           {/* Formal Photo Box */}
-          <div className="w-24 h-28 sm:w-28 sm:h-32 border-2 border-zinc-300 bg-zinc-50 rounded flex flex-col items-center justify-center text-center p-1 shrink-0 overflow-hidden shadow-sm">
-            <div className="w-12 h-12 rounded-full bg-zinc-200 flex items-center justify-center text-zinc-600 mb-1 font-bold text-sm">
-              BS
-            </div>
-            <span className="text-[9px] font-mono text-zinc-600 uppercase font-semibold leading-tight">
-              2x2 Formal ID Photo
-            </span>
+          <div className="w-24 h-28 sm:w-28 sm:h-32 border-2 border-zinc-900 bg-zinc-100 rounded shrink-0 overflow-hidden shadow-sm">
+            <Image
+              src="/2x2.jpg"
+              alt="Brix Sese 2x2 Formal Photo"
+              width={112}
+              height={128}
+              className="w-full h-full object-cover"
+              priority
+            />
           </div>
         </div>
 
