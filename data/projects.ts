@@ -41,6 +41,6 @@ export const projectsData: Project[] = [
     ],
     githubUrl: "https://github.com/brixsese27/brixportfolio",
     liveUrl: "https://brixportfolio.vercel.app",
-    image: "/projects/static-culture.svg"
+    image: "/staticculturehomepage.png"
   }
 ];

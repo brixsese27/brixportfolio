@@ -136,7 +136,7 @@ export function Capstone() {
                 src={capstoneData.image}
                 alt="e-Biga Management Information System Live UI Preview"
                 fill
-                className="object-contain p-2 sm:p-4 transition-transform duration-300 group-hover:scale-[1.01]"
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
                 sizes="(max-width: 1200px) 100vw, 1200px"
                 priority
               />

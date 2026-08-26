@@ -78,5 +78,5 @@ export const capstoneData: CapstoneProject = {
   contributions: [],
   githubUrl: "https://github.com/brixsese27/brixportfolio",
   liveUrl: "https://ebigatanza.com/homepage",
-  image: "/projects/ebiga-mis.svg"
+  image: "/ebigahomepage.png"
 };
