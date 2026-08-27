@@ -6,7 +6,7 @@ export const experienceData: ExperienceItem[] = [
     company: "Gentri Doctors (General Trias Medical Center and Hospital)",
     position: "IT Department Intern (486 Hours)",
     type: "Hospital IT Internship / On-the-Job Training",
-    period: "2024",
+    period: "February 2026 - May 2026",
     location: "General Trias, Cavite",
     description:
       "Completed 486 hours of intensive on-the-job training in a high-demand hospital environment, delivering direct IT support, hardware maintenance, system deployments, network setup, and end-user assistance across medical and administrative departments.",
