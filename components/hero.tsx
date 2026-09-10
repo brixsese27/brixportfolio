@@ -333,6 +333,13 @@ export function Hero() {
                       </span>
                       <span className="text-brand-600 dark:text-brand-400 font-bold">CvSU BSIT Graduate 2022- 2026</span>
                     </div>
+                    <div className="flex items-center justify-between p-2 rounded bg-muted/40">
+                      <span className="text-muted-foreground flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
+                        Credentials
+                      </span>
+                      <span className="text-brand-600 dark:text-brand-400 font-bold">CompTIA A+ (Part 1) • Canva</span>
+                    </div>
                   </div>
 
                   <div className="text-[11px] text-muted-foreground pt-1 text-center">

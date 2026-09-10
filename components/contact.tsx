@@ -105,7 +105,7 @@ export function Contact() {
           <div className="max-w-3xl mb-14">
             <div className="section-label">
               <Terminal className="w-3.5 h-3.5 text-brand-500" />
-              07 // Get in Touch
+              08 // Get in Touch
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground font-sans">
               Let&apos;s build something meaningful.

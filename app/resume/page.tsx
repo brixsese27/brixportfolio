@@ -14,7 +14,8 @@ import {
   Download,
   CheckCircle2,
   Building,
-  UserCheck
+  UserCheck,
+  Award
 } from "lucide-react";
 import { profileData } from "@/data/profile";
 
@@ -36,11 +37,20 @@ export default function ResumePage() {
           Back to Portfolio
         </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
+          <a
+            href="/latestresume.pdf"
+            download="Brix_Sese_Resume.pdf"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs font-mono font-semibold text-zinc-700 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-750 transition-all shadow-sm"
+          >
+            <Download className="w-4 h-4 text-emerald-600" />
+            Download PDF
+          </a>
+
           <button
             type="button"
             onClick={handlePrint}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-mono font-bold transition-all shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-mono font-bold transition-all shadow-md hover:shadow-lg cursor-pointer"
           >
             <Printer className="w-4 h-4" />
             Print / Save as PDF
@@ -115,7 +125,7 @@ export default function ResumePage() {
           
           <ul className="text-xs sm:text-[13px] text-zinc-800 space-y-1.5 list-disc list-outside pl-4">
             <li>
-              <span className="font-bold text-zinc-950">Computer Literacy:</span> Proficient in using computers, productivity software (Microsoft Office, Google Workspace), file management, and common digital tools for daily work tasks.
+              <span className="font-bold text-zinc-950">Computer Literacy:</span> Proficient in using computers, productivity software, file management, and common digital tools for daily work tasks.
             </li>
             <li>
               <span className="font-bold text-zinc-950">Computer/Laptop Hardware:</span> Knowledgeable in hardware components, basic troubleshooting, system maintenance, cleaning, upgrades, and peripheral setup.
@@ -157,7 +167,7 @@ export default function ResumePage() {
 
             <div>
               <div className="font-bold text-zinc-950 italic">
-                e-Biga MIS for Barangay Biga Tanza Cavite (Capstone Project) -{" "}
+                e-Biga MIS for Barangay Biga Tanza Cavite ( Capstone Project ) -{" "}
                 <a
                   href="https://ebigatanza.com"
                   target="_blank"
@@ -199,7 +209,7 @@ export default function ResumePage() {
                 <span className="font-normal text-zinc-700">2020 - 2022</span>
               </div>
               <div className="text-zinc-800">
-                Notre Dame of Trece Martirez
+                Notre Dame of Trece Martinez
               </div>
             </div>
           </div>
@@ -223,28 +233,30 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* Section 6: References */}
+        {/* Section 6: Certificates */}
         <div className="mt-5 space-y-2">
           <h2 className="text-sm sm:text-base font-bold tracking-wider uppercase text-zinc-950 border-b border-zinc-400 pb-0.5">
-            REFERENCE
+            CERTIFICATES
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-[12px] text-zinc-800 pt-1">
-            <div className="p-2.5 rounded border border-zinc-200 bg-zinc-50/60">
-              <div className="font-bold text-zinc-950 text-sm">John Pearl Pintoy</div>
-              <div className="text-zinc-700 font-medium">CSR - Gentri Doctors</div>
-              <div className="mt-1 space-y-0.5 text-zinc-600 font-mono text-[11px]">
-                <div>Tel: +639931447709</div>
-                <div>Email: pearlpnty@gmail.com</div>
+          <div className="space-y-2.5 text-xs sm:text-[13px] text-zinc-800">
+            <div>
+              <div className="flex items-center justify-between font-bold text-zinc-950">
+                <span>CompTIA A+ 1000 – Part 1 — Alison</span>
+                <span className="font-normal text-zinc-700">September 10, 2026</span>
+              </div>
+              <div className="text-zinc-700">
+                Paid Course Completion Certificate • CPD Certified (The CPD Certification Service)
               </div>
             </div>
 
-            <div className="p-2.5 rounded border border-zinc-200 bg-zinc-50/60">
-              <div className="font-bold text-zinc-950 text-sm">Alyssa Mae Bathan</div>
-              <div className="text-zinc-700 font-medium">CSR Teller - Metrobank Naic</div>
-              <div className="mt-1 space-y-0.5 text-zinc-600 font-mono text-[11px]">
-                <div>Tel: +639816481919</div>
-                <div>Email: bathanalyssamae@gmail.com</div>
+            <div>
+              <div className="flex items-center justify-between font-bold text-zinc-950">
+                <span>Canva Essentials — Canva Design School</span>
+                <span className="font-normal text-zinc-700">September 6, 2026</span>
+              </div>
+              <div className="text-zinc-700">
+                Course Completion Certificate • The Canva Team
               </div>
             </div>
           </div>

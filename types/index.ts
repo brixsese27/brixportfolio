@@ -115,6 +115,21 @@ export interface EducationItem {
   highlights: string[];
 }
 
+export interface CertificateItem {
+  id: string;
+  title: string;
+  issuer: string;
+  organization?: string;
+  date: string;
+  credentialId?: string;
+  verifyUrl?: string;
+  image: string;
+  category: string;
+  badgeText: string;
+  skills: string[];
+  description: string;
+}
+
 export interface NavItem {
   label: string;
   href: string;
