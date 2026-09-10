@@ -245,18 +245,28 @@ export default function ResumePage() {
                 <span>CompTIA A+ 1000 – Part 1 — Alison</span>
                 <span className="font-normal text-zinc-700">September 10, 2026</span>
               </div>
-              <div className="text-zinc-700">
-                Paid Course Completion Certificate • CPD Certified (The CPD Certification Service)
+              <div className="text-zinc-700 italic">
+                Paid Course Completion Certificate
               </div>
             </div>
 
             <div>
               <div className="flex items-center justify-between font-bold text-zinc-950">
-                <span>Canva Essentials — Canva Design School</span>
+                <span>Windows 11 for IT Support: Troubleshooting Basics – LinkedIn Learning</span>
+                <span className="font-normal text-zinc-700">September 10, 2026</span>
+              </div>
+              <div className="text-zinc-700 italic">
+                Course Completion Certificate
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between font-bold text-zinc-950">
+                <span>Canva Essentials – Canva Design School</span>
                 <span className="font-normal text-zinc-700">September 6, 2026</span>
               </div>
-              <div className="text-zinc-700">
-                Course Completion Certificate • The Canva Team (Credential ID: b217f9)
+              <div className="text-zinc-700 italic">
+                Course Completion Certificate
               </div>
             </div>
           </div>

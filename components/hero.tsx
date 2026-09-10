@@ -338,7 +338,7 @@ export function Hero() {
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
                         Credentials
                       </span>
-                      <span className="text-brand-600 dark:text-brand-400 font-bold">CompTIA A+ (Part 1) • Canva</span>
+                      <span className="text-brand-600 dark:text-brand-400 font-bold">CompTIA A+ • Windows 11 • Canva</span>
                     </div>
                   </div>
 

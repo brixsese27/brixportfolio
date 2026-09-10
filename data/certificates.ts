@@ -24,6 +24,26 @@ export const certificatesData: CertificateItem[] = [
       "Accredited foundation training in core IT support covering computer hardware components, mobile device maintenance, networking essentials, and systematic troubleshooting methodologies aligned with CompTIA A+ industry standards."
   },
   {
+    id: "cert-windows-11-support",
+    title: "Windows 11 for IT Support: Troubleshooting Basics",
+    issuer: "LinkedIn Learning",
+    organization: "LinkedIn Corporation",
+    date: "September 10, 2026",
+    credentialId: "be52d0cee58aedc8c22a2cc673fe5715d054a22518bf2ba4da38022589618e5b",
+    image: "/win11cert.jpg",
+    category: "Operating Systems & Helpdesk",
+    badgeText: "LinkedIn Learning • Windows 11",
+    skills: [
+      "Software Troubleshooting",
+      "Help Desk Support",
+      "Windows 11 OS",
+      "System Diagnostics",
+      "Desktop Support"
+    ],
+    description:
+      "Professional coursework in Windows 11 operating system troubleshooting, helpdesk support workflows, software diagnostics, and IT maintenance strategies for modern workstations."
+  },
+  {
     id: "cert-canva-essentials",
     title: "Canva Essentials",
     issuer: "Canva Design School",
