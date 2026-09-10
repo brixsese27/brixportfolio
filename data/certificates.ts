@@ -30,6 +30,7 @@ export const certificatesData: CertificateItem[] = [
     organization: "The Canva Team",
     date: "September 6, 2026",
     credentialId: "b217f9",
+    verifyUrl: "https://www.canva.com/design-school/certification-award/b217f9e5-6a04-4ef8-b6c6-e20a8cebf53d",
     image: "/canvacert.jpg",
     category: "Digital Design & Media",
     badgeText: "Canva Certified • Digital Design",

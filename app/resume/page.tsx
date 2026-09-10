@@ -256,7 +256,7 @@ export default function ResumePage() {
                 <span className="font-normal text-zinc-700">September 6, 2026</span>
               </div>
               <div className="text-zinc-700">
-                Course Completion Certificate • The Canva Team
+                Course Completion Certificate • The Canva Team (Credential ID: b217f9)
               </div>
             </div>
           </div>
