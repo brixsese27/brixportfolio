@@ -122,7 +122,7 @@ export function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden lg:flex items-center gap-1 bg-card/70 border border-border/70 p-1.5 rounded-full backdrop-blur-md shadow-sm"
+            className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-card/70 border border-border/70 p-1 rounded-full backdrop-blur-md shadow-sm"
             aria-label="Main Navigation"
           >
             {navItems.map((item) => {
@@ -134,7 +134,7 @@ export function Navbar() {
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={cn(
-                    "px-3.5 py-1.5 text-xs font-mono font-medium rounded-full transition-all duration-200",
+                    "px-2.5 xl:px-3.5 py-1 xl:py-1.5 text-[11px] xl:text-xs font-mono font-medium rounded-full transition-all duration-200",
                     isActive
                       ? "bg-primary text-primary-foreground font-semibold shadow-sm"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent/60"

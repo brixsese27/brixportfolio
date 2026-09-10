@@ -223,8 +223,8 @@ export function Certificates() {
             </div>
 
             {/* Modal Image Body */}
-            <div className="relative flex-1 w-full min-h-[360px] sm:min-h-[500px] max-h-[75vh] bg-zinc-950/90 flex items-center justify-center p-2 sm:p-4 overflow-auto">
-              <div className="relative w-full h-full min-h-[340px] sm:min-h-[480px]">
+            <div className="relative flex-1 w-full h-[52vh] sm:h-[65vh] min-h-[260px] sm:min-h-[460px] max-h-[75vh] bg-zinc-950/90 flex items-center justify-center p-2 sm:p-4 overflow-auto">
+              <div className="relative w-full h-full">
                 <Image
                   src={selectedCert.image}
                   alt={`${selectedCert.title} Certificate full view`}
