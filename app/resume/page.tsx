@@ -245,8 +245,16 @@ export default function ResumePage() {
                 <span>CompTIA A+ 1000 – Part 1 — Alison</span>
                 <span className="font-normal text-zinc-700">September 10, 2026</span>
               </div>
-              <div className="text-zinc-700 italic">
-                Paid Course Completion Certificate
+              <div className="text-zinc-700 italic flex items-center justify-between">
+                <span>Paid Course Completion Certificate</span>
+                <a
+                  href="https://alison.com/verify/4746882785"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-700 hover:underline font-normal text-[11px] not-italic print:hidden"
+                >
+                  Verify Credential ↗
+                </a>
               </div>
             </div>
 
@@ -255,8 +263,16 @@ export default function ResumePage() {
                 <span>Windows 11 for IT Support: Troubleshooting Basics – LinkedIn Learning</span>
                 <span className="font-normal text-zinc-700">September 10, 2026</span>
               </div>
-              <div className="text-zinc-700 italic">
-                Course Completion Certificate
+              <div className="text-zinc-700 italic flex items-center justify-between">
+                <span>Course Completion Certificate</span>
+                <a
+                  href="https://www.linkedin.com/learning/certificates/be52d0cee58aedc8c22a2cc673fe5715d054a22518bf2ba4da38022589618e5b?trk=share_certificate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-700 hover:underline font-normal text-[11px] not-italic print:hidden"
+                >
+                  Verify Credential ↗
+                </a>
               </div>
             </div>
 
@@ -265,8 +281,16 @@ export default function ResumePage() {
                 <span>Canva Essentials – Canva Design School</span>
                 <span className="font-normal text-zinc-700">September 6, 2026</span>
               </div>
-              <div className="text-zinc-700 italic">
-                Course Completion Certificate
+              <div className="text-zinc-700 italic flex items-center justify-between">
+                <span>Course Completion Certificate</span>
+                <a
+                  href="https://www.canva.com/design-school/certification-award/b217f9e5-6a04-4ef8-b6c6-e20a8cebf53d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-700 hover:underline font-normal text-[11px] not-italic print:hidden"
+                >
+                  Verify Credential ↗
+                </a>
               </div>
             </div>
           </div>

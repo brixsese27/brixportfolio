@@ -30,6 +30,7 @@ export const certificatesData: CertificateItem[] = [
     organization: "LinkedIn Corporation",
     date: "September 10, 2026",
     credentialId: "be52d0cee58aedc8c22a2cc673fe5715d054a22518bf2ba4da38022589618e5b",
+    verifyUrl: "https://www.linkedin.com/learning/certificates/be52d0cee58aedc8c22a2cc673fe5715d054a22518bf2ba4da38022589618e5b?trk=share_certificate",
     image: "/win11cert.jpg",
     category: "Operating Systems & Helpdesk",
     badgeText: "LinkedIn Learning • Windows 11",
