@@ -2,6 +2,27 @@ import { CertificateItem } from "@/types";
 
 export const certificatesData: CertificateItem[] = [
   {
+    id: "cert-professional-networking",
+    title: "Professional Networking",
+    issuer: "LinkedIn Learning",
+    organization: "PMI® Registered Education Provider",
+    date: "September 11, 2026",
+    credentialId: "17d51e2103c2e7801df29c93cfa703bc4613ef67642669d32f91b046b53a232e",
+    verifyUrl: "https://www.linkedin.com/learning/certificates/17d51e2103c2e7801df29c93cfa703bc4613ef67642669d32f91b046b53a232e?trk=share_certificate",
+    image: "/networkingcert.jpg",
+    category: "Professional Development",
+    badgeText: "LinkedIn Learning • PMI® Provider",
+    skills: [
+      "Professional Networking",
+      "Relationship Building",
+      "Career Development",
+      "Strategic Communication",
+      "Interpersonal Skills"
+    ],
+    description:
+      "Accredited professional training authorized by Project Management Institute (PMI®) on authentic networking strategies, relationship building, professional outreach, and establishing long-term collaborative connections in modern tech environments."
+  },
+  {
     id: "cert-comptia-a-plus",
     title: "CompTIA A+ 1000 - Part 1",
     issuer: "Alison",

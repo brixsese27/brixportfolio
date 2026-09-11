@@ -100,8 +100,8 @@ export function Certificates() {
           </div>
         </ScrollReveal>
 
-        {/* Certificates Showcase Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Certificates Showcase Grid (Balanced 2x2 Grid) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {certificatesData.map((cert, idx) => (
             <ScrollReveal
               key={cert.id}
