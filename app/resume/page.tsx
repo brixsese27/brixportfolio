@@ -242,13 +242,13 @@ export default function ResumePage() {
           <div className="space-y-2.5 text-xs sm:text-[13px] text-zinc-800">
             <div>
               <div className="flex items-center justify-between font-bold text-zinc-950">
-                <span>Professional Networking – PMI® Registered Education Provider</span>
-                <span className="font-normal text-zinc-700">September 11, 2026</span>
+                <span>ITIL® Foundation 4 First Look – LinkedIn Learning</span>
+                <span className="font-normal text-zinc-700">September 15, 2026</span>
               </div>
               <div className="text-zinc-700 italic flex items-center justify-between">
                 <span>Course Completion Certificate</span>
                 <a
-                  href="https://www.linkedin.com/learning/certificates/17d51e2103c2e7801df29c93cfa703bc4613ef67642669d32f91b046b53a232e?trk=share_certificate"
+                  href="https://www.linkedin.com/learning/certificates/6e07affde4c0965808529fd424d79b4bee5d1240a7e07da7bc4fc0e4ca5288a2?trk=share_certificate"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-emerald-700 hover:underline font-normal text-[11px] not-italic print:hidden"

@@ -2,25 +2,25 @@ import { CertificateItem } from "@/types";
 
 export const certificatesData: CertificateItem[] = [
   {
-    id: "cert-professional-networking",
-    title: "Professional Networking",
+    id: "cert-itil-4-foundation",
+    title: "ITIL® Foundation 4 First Look",
     issuer: "LinkedIn Learning",
-    organization: "PMI® Registered Education Provider",
-    date: "September 11, 2026",
-    credentialId: "17d51e2103c2e7801df29c93cfa703bc4613ef67642669d32f91b046b53a232e",
-    verifyUrl: "https://www.linkedin.com/learning/certificates/17d51e2103c2e7801df29c93cfa703bc4613ef67642669d32f91b046b53a232e?trk=share_certificate",
-    image: "/networkingcert.jpg",
-    category: "Professional Development",
-    badgeText: "LinkedIn Learning • PMI® Provider",
+    organization: "PeopleCert / AXELOS (ITIL® Standards)",
+    date: "September 15, 2026",
+    credentialId: "6e07affde4c0965808529fd424d79b4bee5d1240a7e07da7bc4fc0e4ca5288a2",
+    verifyUrl: "https://www.linkedin.com/learning/certificates/6e07affde4c0965808529fd424d79b4bee5d1240a7e07da7bc4fc0e4ca5288a2?trk=share_certificate",
+    image: "/itilcert.jpg",
+    category: "IT Service Management (ITSM)",
+    badgeText: "LinkedIn Learning • ITIL® 4",
     skills: [
-      "Professional Networking",
-      "Relationship Building",
-      "Career Development",
-      "Strategic Communication",
-      "Interpersonal Skills"
+      "ITIL",
+      "IT Service Management (ITSM)",
+      "Service Desk Workflows",
+      "Incident Management",
+      "IT Best Practices"
     ],
     description:
-      "Accredited professional training authorized by Project Management Institute (PMI®) on authentic networking strategies, relationship building, professional outreach, and establishing long-term collaborative connections in modern tech environments."
+      "Foundational understanding of ITIL 4 service value systems, core IT service management (ITSM) principles, incident lifecycle resolution, and service desk best practices for enterprise IT environments."
   },
   {
     id: "cert-comptia-a-plus",
